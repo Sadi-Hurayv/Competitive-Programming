@@ -1,0 +1,6 @@
+Maybe BUG in point system
+
+Hi there!!
+Maybe there is a bug in the point system. As I solved 356 problems, according to that my point is 1172.6. But your rank list shows me that my point is 203.43. I think there is a bug in your point counting system.
+Thanks. 
+Stay home, stay safe!!!

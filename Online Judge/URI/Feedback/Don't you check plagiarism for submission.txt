@@ -1,0 +1,7 @@
+(Plagium Detection)Don't you check plagiarism for submission
+
+I don't know whether you check plagiarism for submitted code or not. It is very dishearten that many users just copy the code from online and pest it here and you can't do anything about it. 
+Here is a user's ID: https://www.urionlinejudge.com.br/judge/en/users/statistics/426772
+On May 3, 2020 he solved 275 items which is very suspicious and quite impossible. On May 4, 2020 he solved 88, on May 5, 2020 he solved 69 items which are very suspicious. There are many like him. 
+I think you should do something about it.
+You can add a feature a like "Report the user" for each user. By it any user can report others with suspicious act. By this feature you could get the list of users with suspicious act. Then you can check the user details and submission list or code.

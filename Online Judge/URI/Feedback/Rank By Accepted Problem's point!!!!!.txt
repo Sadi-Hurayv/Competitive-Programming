@@ -1,0 +1,15 @@
+Rank By Solved Problem's points only!!!!!
+
+Hi!!!
+This is a long mail. Please read the whole mail carefully with patience.
+In this judge, if we submit the same problem with multiple languages and if the submission gets accepted then for each language we get point and our rank is ordered by all the point we have got in such way. But there is a disadvantage too. We can see that user with few solved problems(by multiple language) get higher rank than a user with more solved problems. Such like a user with 150 solved problem(by multiple language) has higher rank than 400+ or 450+ solved problems.That's not fair in seance of problem solving skills. That's why I propose a solution or an idea if you like. 
+
+You can add a new feature "Rank By Solved Problem's point". 
+This will work like:
+    1. Points will be counted only one time (Though he has the accepted answer in multiple 
+       languages).
+    2. Rank will be ordered by these points.
+
+I think this rank system will bring more competition among the programmers and bring a fare rank system for in seance of problem solving skills.
+
+Thanks for reading the mail. Hope I will get my reply soon.

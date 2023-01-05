@@ -1,0 +1,24 @@
+(description error) URI Online Judge | 2852 (Messaging) 
+
+
+
+https://www.urionlinejudge.com.br/judge/en/problems/view/2852
+
+Hi there!!!!
+In the problem description of "URI Online Judge | 2852 (Messaging)" below the image in 2nd paragraph,
+("
+The text to be ciphered is "computer science";
+The key-word is "obi";
+Now, we should repeat the keyword many times as necessary to compose all the text to be ciphered:
+    "computer science"
+    "obiobiob obiobio"
+")
+In the last two lines the key sequence after the reputation of the key will be 
+    "computer science"
+    "obiobiob iobiobi"  <-- the last word "iobiobi"
+correct --> "iobiobi" output --> "aqjmbdm" (in the 16th line before the 3rd paragraph).
+wrong -->   "obiobio" output --> "gdqsoks"  (according to the wrong sequence).
+
+Here is the code link that I submitted and got accepted: https://paste.ubuntu.com/p/bHN4RxK9mB/
+
+Thanks!!!
