@@ -1,3 +1,2 @@
 
-    {
-        arr['a'-sen[i]]=1;
+#ifndef ONLINE_JUDGE

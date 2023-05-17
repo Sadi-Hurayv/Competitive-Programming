@@ -73,8 +73,8 @@ int main()
     cin.tie(NULL), cout.tie(NULL);
 
 #ifndef ONLINE_JUDGE
-    freopen("/media/shuvra/New Volume/IIT/Programming/CP/IO/input.txt", "r", stdin);
-    freopen("/media/shuvra/New Volume/IIT/Programming/CP/IO/output.txt", "w", stdout);
+    freopen("/media/shuvra/New Volume/IIT/Programming/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/media/shuvra/New Volume/IIT/Programming/Competitive-Programming/IO/output.txt", "w", stdout);
 #endif // ONLINE_JUDGE
 
     ll a, b;
@@ -82,6 +82,7 @@ int main()
     cin >> a >> b;
     cout << (a * b) / __gcd(a, b) << endl;
     cout << (a * b) / gcd(a, b) << endl;
+    // a / gcd(a, b) * b; //avoids integer overflow
 
     return 0;
 }

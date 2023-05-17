@@ -57,8 +57,8 @@ int main()
     cin.tie(NULL), cout.tie(NULL);
 
 #ifndef ONLINE_JUDGE
-    freopen("/media/shuvra/New Volume/IIT/Programming/CP/IO/input.txt", "r", stdin);
-    freopen("/media/shuvra/New Volume/IIT/Programming/CP/IO/output.txt", "w", stdout);
+    freopen("/media/shuvra/New Volume/IIT/Programming/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/media/shuvra/New Volume/IIT/Programming/Competitive-Programming/IO/output.txt", "w", stdout);
 #endif // ONLINE_JUDGE
 
     ll n, p, tmpn, nod;
@@ -83,7 +83,7 @@ int main()
     if (n > 1)
         nod *= 2;
 
-    cout << "Number of divisors of " << tmpn << ": " << nod << endl;
+    cout << nod << endl;
 
     return 0;
 }
