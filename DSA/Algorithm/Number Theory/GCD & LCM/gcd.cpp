@@ -55,8 +55,9 @@ ll gcd(ll a, ll b)
 {
     if (a == 0)
         return b;
-    return gcd(b % a, a);
-    
+    return gcd(b % a, a); // if return b
+    // return gcd(b, a % b); // if return a
+
     // Naive way to code
     // if (a == 0)
     //     return b;

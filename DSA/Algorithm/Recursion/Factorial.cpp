@@ -64,8 +64,8 @@ int main()
     cin.tie(NULL), cout.tie(NULL);
 
 #ifndef ONLINE_JUDGE
-    freopen("/media/shuvra/New Volume/IIT/Programming/CP/IO/input.txt", "r", stdin);
-    freopen("/media/shuvra/New Volume/IIT/Programming/CP/IO/output.txt", "w", stdout);
+    freopen("/media/shuvra/New Volume/Mind Forge/Code-Vault/Competitive-Programming/IO/input.txt", "r", stdin);
+    freopen("/media/shuvra/New Volume/Mind Forge/Code-Vault/Competitive-Programming/IO/output.txt", "w", stdout);
 #endif // ONLINE_JUDGE
 
     ll n, m, a, b, c, x, y, tc, mx, mn, ev, od;

@@ -1,0 +1,3165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cherrytree>
+  <bookmarks list=""/>
+  <node name="CP" unique_id="1" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1664051667" ts_lastsave="1672913339">
+    <node name="Math" unique_id="3" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1665134577" ts_lastsave="1682634801">
+      <node name="Modular Arithmetic" unique_id="2" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1664057310" ts_lastsave="1672522323">
+        <rich_text>Modular arithmetic is the branch of arithmetic mathematics related with the “mod” functionality. Basically, modular arithmetic is related with computation of “mod” of expressions. Expressions may have digits and computational symbols of addition, subtraction, multiplication, division or any other.	
+	
+</rich_text>
+        <rich_text weight="heavy">Quotient Remainder Theorem:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text family="monospace">a = b x q + r where 0 &lt;= r &lt; b</rich_text>
+        <rich_text>
+	
+</rich_text>
+        <rich_text weight="heavy">Modular Addition:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text family="monospace">(a + b) % m = ((a % m) + (b % m)) % m</rich_text>
+        <rich_text>
+	
+</rich_text>
+        <rich_text weight="heavy">Modular Substraction:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text family="monospace">((-b) % m) = (((- b) % m) + m) % m</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text family="monospace">(a - b) % m = ((a % m) + ((-b) % m)) % m</rich_text>
+        <rich_text>
+	
+</rich_text>
+        <rich_text weight="heavy">Modular Multiplication:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text family="monospace">(a x b) % m = ((a % m) x (b % m)) % m</rich_text>
+        <rich_text>
+	
+</rich_text>
+        <rich_text weight="heavy">Modular Division:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text family="monospace">(a / b) % m = (a x (inverse of b if exists)) % m
+</rich_text>
+        <rich_text>
+</rich_text>
+        <rich_text weight="heavy">Moduler Inverse:</rich_text>
+        <rich_text>
+	The modular inverse of </rich_text>
+        <rich_text family="monospace">a mod m</rich_text>
+        <rich_text> exists only if a and m are relatively prime i.e. </rich_text>
+        <rich_text family="monospace">gcd(a, m) = 1</rich_text>
+        <rich_text>. Hence, for finding the inverse of an under modulo m, if </rich_text>
+        <rich_text family="monospace">(a x b) % m = 1</rich_text>
+        <rich_text> then b is the modular inverse of a.
+	Example: a = 5, m = 7, (a x b) % m = (5 x 3) % 7 = 1 hence, b=3 is modulo inverse of 5 under 7.
+		Programetically we can </rich_text>
+        <rich_text weight="heavy">Bruteforce</rich_text>
+        <rich_text> b from 1 to m-1 and check for which b, (a x b) % m = 1.
+		
+	</rich_text>
+        <rich_text weight="heavy">Fermat's Little Theorem:</rich_text>
+        <rich_text>
+		Let </rich_text>
+        <rich_text family="monospace">p</rich_text>
+        <rich_text> be a prime which does not divide the integer </rich_text>
+        <rich_text family="monospace">a</rich_text>
+        <rich_text>, then </rich_text>
+        <rich_text family="monospace">a</rich_text>
+        <rich_text family="monospace" scale="sup">p-1</rich_text>
+        <rich_text family="monospace"> ≡ 1 (mod p)</rich_text>
+        <rich_text>.
+		</rich_text>
+        <rich_text weight="heavy">Proof:</rich_text>
+        <rich_text>
+			Start by listing the first p-1 positive multiples of a: </rich_text>
+        <rich_text family="monospace">a, 2a, 3a, ... (p -1)a</rich_text>
+        <rich_text>
+			Suppose that </rich_text>
+        <rich_text family="monospace">ra</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text family="monospace">sa</rich_text>
+        <rich_text> are the same </rich_text>
+        <rich_text family="monospace">modulo p</rich_text>
+        <rich_text>, then we have </rich_text>
+        <rich_text family="monospace">r = s (mod p)</rich_text>
+        <rich_text>, so the p-1 multiples of a above are distinct and nonzero; that is, they must be congruent to </rich_text>
+        <rich_text family="monospace">1, 2, 3, ..., p-1</rich_text>
+        <rich_text> in some order. That means for prime </rich_text>
+        <rich_text family="monospace">p</rich_text>
+        <rich_text>, </rich_text>
+        <rich_text family="monospace">modulo p</rich_text>
+        <rich_text> of </rich_text>
+        <rich_text family="monospace">1</rich_text>
+        <rich_text> to </rich_text>
+        <rich_text family="monospace">p-1</rich_text>
+        <rich_text> multiplies of </rich_text>
+        <rich_text family="monospace">a</rich_text>
+        <rich_text> [</rich_text>
+        <rich_text family="monospace">a, 2a, 3a, ... (p -1)a</rich_text>
+        <rich_text>] will be distinct [</rich_text>
+        <rich_text family="monospace">1, 2, 3, ..., p-1</rich_text>
+        <rich_text>] for each multiplies in random order.
+			Now multiply all these congruences together and we find,
+				</rich_text>
+        <rich_text family="monospace">a (2a) (3a) ... ((p-1)a) ≡ 1.2.3.....(p-1) (mod p)</rich_text>
+        <rich_text>
+				</rich_text>
+        <rich_text family="monospace">=&gt; a</rich_text>
+        <rich_text family="monospace" scale="sup">p-1</rich_text>
+        <rich_text family="monospace"> (p-1)! ≡ (p-1)! (mod p)</rich_text>
+        <rich_text>
+				</rich_text>
+        <rich_text family="monospace">=&gt; a</rich_text>
+        <rich_text family="monospace" scale="sup">p-1</rich_text>
+        <rich_text family="monospace"> ≡ 1 (mod p)</rich_text>
+        <rich_text>  [Divide both side by (p-1)!]
+					[Proved]
+	</rich_text>
+        <rich_text weight="heavy">Modulo Inverse Under Prime Modulo:</rich_text>
+        <rich_text>
+		For prime </rich_text>
+        <rich_text family="monospace">p</rich_text>
+        <rich_text>, </rich_text>
+        <rich_text family="monospace">a x (1/a) = 1 (mod p)</rich_text>
+        <rich_text> [</rich_text>
+        <rich_text family="monospace">a x (1/a) = 1</rich_text>
+        <rich_text>]. So </rich_text>
+        <rich_text family="monospace">(1/a)</rich_text>
+        <rich_text> is the modulo inverse of </rich_text>
+        <rich_text family="monospace">a</rich_text>
+        <rich_text> under </rich_text>
+        <rich_text family="monospace">modulo p</rich_text>
+        <rich_text>.
+		From Fermat's Little Theorem,
+			</rich_text>
+        <rich_text family="monospace">a</rich_text>
+        <rich_text family="monospace" scale="sup">p-1</rich_text>
+        <rich_text family="monospace"> ≡ 1 (mod p)</rich_text>
+        <rich_text>
+			</rich_text>
+        <rich_text family="monospace">=&gt; a</rich_text>
+        <rich_text family="monospace" scale="sup">p-2</rich_text>
+        <rich_text family="monospace">	≡ (1/a) (mod p)</rich_text>
+        <rich_text>
+			Hence, modulo inverse of </rich_text>
+        <rich_text family="monospace">a</rich_text>
+        <rich_text> under </rich_text>
+        <rich_text family="monospace">modulo p</rich_text>
+        <rich_text> is </rich_text>
+        <rich_text family="monospace">(a</rich_text>
+        <rich_text family="monospace" scale="sup">p-2</rich_text>
+        <rich_text family="monospace"> mod p)</rich_text>
+        <rich_text>.
+			So, moduler division for prime modulo </rich_text>
+        <rich_text family="monospace">p</rich_text>
+        <rich_text>, </rich_text>
+        <rich_text family="monospace">(a/b) mod p = (a * (b</rich_text>
+        <rich_text family="monospace" scale="sup">p-2</rich_text>
+        <rich_text family="monospace"> mod p)) mod p</rich_text>
+        <rich_text>
+			
+	
+</rich_text>
+        <rich_text weight="heavy">Modular Exponentiation (Big Mod):</rich_text>
+        <rich_text>
+	Finding </rich_text>
+        <rich_text family="monospace">a</rich_text>
+        <rich_text family="monospace" scale="sup">n</rich_text>
+        <rich_text family="monospace"> mod m</rich_text>
+        <rich_text> is the modular exponentiation. </rich_text>
+        <rich_text family="monospace">a</rich_text>
+        <rich_text family="monospace" scale="sup">n</rich_text>
+        <rich_text> where a and n are large that </rich_text>
+        <rich_text family="monospace">a</rich_text>
+        <rich_text family="monospace" scale="sup">n</rich_text>
+        <rich_text> won't fit in long long integer, that's why doing mod won't help.
+	To solve this problem we can use </rich_text>
+        <rich_text style="italic" weight="heavy">Bruteforce</rich_text>
+        <rich_text> technique to iterate over n and multiply a and doing mod [</rich_text>
+        <rich_text family="monospace">ans = (ans * a) mod m</rich_text>
+        <rich_text>]. But cpmpexity of this is O(n). But we can reduce the complexity to log</rich_text>
+        <rich_text scale="sub">2</rich_text>
+        <rich_text>(n). 
+		a</rich_text>
+        <rich_text scale="sup">100</rich_text>
+        <rich_text> = a</rich_text>
+        <rich_text scale="sup">50</rich_text>
+        <rich_text> * a</rich_text>
+        <rich_text scale="sup">50</rich_text>
+        <rich_text>
+		a</rich_text>
+        <rich_text scale="sup">50</rich_text>
+        <rich_text> = a</rich_text>
+        <rich_text scale="sup">25</rich_text>
+        <rich_text> * a</rich_text>
+        <rich_text scale="sup">25</rich_text>
+        <rich_text>
+		a</rich_text>
+        <rich_text scale="sup">25</rich_text>
+        <rich_text> = a</rich_text>
+        <rich_text scale="sup">12</rich_text>
+        <rich_text> * a</rich_text>
+        <rich_text scale="sup">12</rich_text>
+        <rich_text> * a
+		a</rich_text>
+        <rich_text scale="sup">12</rich_text>
+        <rich_text> = a</rich_text>
+        <rich_text scale="sup">6</rich_text>
+        <rich_text> * a</rich_text>
+        <rich_text scale="sup">6</rich_text>
+        <rich_text>
+		a</rich_text>
+        <rich_text scale="sup">6</rich_text>
+        <rich_text> = a</rich_text>
+        <rich_text scale="sup">3</rich_text>
+        <rich_text> * a</rich_text>
+        <rich_text scale="sup">3</rich_text>
+        <rich_text>
+		a</rich_text>
+        <rich_text scale="sup">3</rich_text>
+        <rich_text> = a</rich_text>
+        <rich_text scale="sup">1</rich_text>
+        <rich_text> * a</rich_text>
+        <rich_text scale="sup">1</rich_text>
+        <rich_text> * a
+	At every step we reduce </rich_text>
+        <rich_text style="italic" weight="heavy">n</rich_text>
+        <rich_text> to </rich_text>
+        <rich_text style="italic" weight="heavy">n/2</rich_text>
+        <rich_text>.
+	</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+</rich_text>
+        <rich_text weight="heavy">Related Problem:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text style="italic" weight="heavy">1. Print the last k digit of a</rich_text>
+        <rich_text style="italic" scale="sup" weight="heavy">n</rich_text>
+        <rich_text style="italic" weight="heavy"> (in decimal).</rich_text>
+        <rich_text>
+		Solution: Procedure is same as modular exponentiation but we have to mod it with 10</rich_text>
+        <rich_text scale="sup">k</rich_text>
+        <rich_text>.
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+	</rich_text>
+        <rich_text style="italic" weight="heavy">2. Print the last k digit of a</rich_text>
+        <rich_text style="italic" scale="sup" weight="heavy">n</rich_text>
+        <rich_text style="italic" weight="heavy"> (in binary).</rich_text>
+        <rich_text>
+		Solution: Procedure is same as above but we have to mod it with 2</rich_text>
+        <rich_text scale="sup">k</rich_text>
+        <rich_text>.
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+	</rich_text>
+        <rich_text style="italic" weight="heavy">3. Print something modulo 2</rich_text>
+        <rich_text style="italic" scale="sup" weight="heavy">32</rich_text>
+        <rich_text style="italic" weight="heavy"> or modulo 2</rich_text>
+        <rich_text style="italic" scale="sup" weight="heavy">64</rich_text>
+        <rich_text style="italic" weight="heavy">.</rich_text>
+        <rich_text>
+		Solution: Taking all the veriable as </rich_text>
+        <rich_text style="italic" weight="heavy">unsigned int</rich_text>
+        <rich_text> related to the calculation will give modulo 2</rich_text>
+        <rich_text scale="sup">32</rich_text>
+        <rich_text>. It is safe to take all the veriable as unsigned int. 			Similarly, tking all the veriable as </rich_text>
+        <rich_text style="italic" weight="heavy">unsigned long long int</rich_text>
+        <rich_text> related to the calculation will give modulo 2</rich_text>
+        <rich_text scale="sup">64</rich_text>
+        <rich_text>. We don't have to mod separately.
+		</rich_text>
+        <rich_text family="monospace">modulo 2</rich_text>
+        <rich_text family="monospace" scale="sup">32</rich_text>
+        <rich_text family="monospace"> → unsigned int
+</rich_text>
+        <rich_text>		</rich_text>
+        <rich_text family="monospace">modulo 2</rich_text>
+        <rich_text family="monospace" scale="sup">64</rich_text>
+        <rich_text family="monospace"> → unsigned long long int</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text style="italic" weight="heavy">4. Multiply large integers under large modulo or avoid overflow in modular multiplication</rich_text>
+        <rich_text weight="heavy">.</rich_text>
+        <rich_text>
+		Solution: Given an integer a, b, m. Find (a * b ) mod m, where a, b may be large and their direct multiplication may cause overflow. Therefore we use the basic approach of multiplication i.e., a * b = a + a + … + a (b times). Now easily compute the value of addition (under modulo m) without any overflow in the calculation. If we use </rich_text>
+        <rich_text weight="heavy">Bruteforce</rich_text>
+        <rich_text> apprach for adding </rich_text>
+        <rich_text family="monospace">a</rich_text>
+        <rich_text> </rich_text>
+        <rich_text family="monospace">b</rich_text>
+        <rich_text> times time complexity will be O(b). But we can reduce the complexity to O(log b) using the same technique we used in modular exponentiation. But insted of multiplying we will adding.
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+		
+	
+</rich_text>
+        <rich_text weight="heavy">Important Propertice:</rich_text>
+        <rich_text>
+	1. </rich_text>
+        <rich_text family="monospace">(a % b) = a - floor(a / b) * b</rich_text>
+        <rich_text>
+	2. </rich_text>
+        <rich_text family="monospace">(x % 2</rich_text>
+        <rich_text family="monospace" scale="sup">k</rich_text>
+        <rich_text family="monospace">) = x &amp; (2</rich_text>
+        <rich_text family="monospace" scale="sup">k</rich_text>
+        <rich_text family="monospace"> - 1) = x &amp; ((1 &lt;&lt; k) - 1)</rich_text>
+        <rich_text>
+	
+	</rich_text>
+        <rich_text style="italic" weight="heavy">N.B. Here % means mod.</rich_text>
+        <rich_text>
+	
+	
+</rich_text>
+        <codebox char_offset="2769" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">long long int power(long long int a, long long int n, long long int mod)
+{
+	long long int x;
+	if (n == 1)
+		return a % mod;
+	x = recursive_power(a, n / 2);
+	if (n % 2)
+		return (((x * x) % mod) * a) % mod;
+	else
+		return (x * x) % mod;
+}</codebox>
+        <codebox char_offset="2942" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+long long int power(long long int a, long long int n, long long int mod)
+{
+	long long int x;
+	if (n == 1)
+		return a % mod;
+
+	x = power(a, n / 2, mod);
+	if (n % 2)
+		return (((x * x) % mod) * a) % mod;
+	else
+		return (x * x) % mod;
+}
+
+int numberOfDigits(long long int n)
+{
+	int cnt = 0;
+	while (n)
+	{
+		n /= 10;
+		cnt++;
+	}
+	return cnt;
+}
+
+void last_k_digit(long long int a, long long int n, long long int k)
+{
+	long long int mod = 1, digit;
+	for (int i = 0; i &lt; k; i++)
+		mod *= 10; // mod=10^k
+
+	digit = power(a, n, mod);
+	for (int i = 0; i &lt; k - numberOfDigits(digit); i++)
+		cout &lt;&lt; 0;
+	if (digit)
+		cout &lt;&lt; digit &lt;&lt; endl;
+}
+
+int main()
+{
+	long long int a, n, k;
+	a = 3, n = 100000, k = 9; // Last k digit of a^n
+
+	// Decimal form
+	last_k_digit(a, n, k);
+
+	return 0;
+}</codebox>
+        <codebox char_offset="3079" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">long long int last_k_digit_binary(long long int a, long long int n, long long int k)
+{
+	long long int x;
+	if (n == 1)
+		return a % mod;
+
+	x = last_k_digit_binary(a, n / 2, k);
+	// If we use % sign we have to use 2^k = (1&lt;&lt;k), or if we use &amp; then we have to use (2^k)-1 = (1&lt;&lt;k)-1
+	if (n % 2)
+		return (((x * x) % (1 &lt;&lt; k)) * a) % (1 &lt;&lt; k);
+	else
+		return (x * x) % (1 &lt;&lt; k);
+}</codebox>
+        <codebox char_offset="4157" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">long long int multiplication_mod(long long int a, long long int b, long long int mod)
+{
+	long long int x;
+	if (b == 1)
+		return a % mod;
+
+	x = multiplication_mod(a, b / 2, mod);
+	if (b % 2)
+		return (((x + x) % mod) + a) % mod;
+	else
+		return (x + x) % mod;
+}</codebox>
+      </node>
+      <node name="Prime" unique_id="11" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1669741489" ts_lastsave="1683396083">
+        <rich_text weight="heavy">Prime Number:</rich_text>
+        <rich_text> A prime number (or a prime) is a natural number greater than 1 that is not a product of two smaller natural numbers.
+	For example, 5 is prime because the only ways of writing it as a product, 1 × 5 or 5 × 1, involve 5 itself. 
+
+</rich_text>
+        <rich_text weight="heavy">Composite number:</rich_text>
+        <rich_text> A natural number greater than 1 that is not prime is called a composite number.
+	For example, 4 is composite because it is a product (2 × 2) in which both numbers are smaller than 4. 
+ 
+</rich_text>
+        <rich_text weight="heavy">Fundamental Theorem of Arithmetic:</rich_text>
+        <rich_text> Every natural number greater than 1 is either a prime itself or can be factorized as a product of primes that is unique up to their order.
+	For example, </rich_text>
+        <rich_text family="monospace">12 = 2</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text family="monospace">.3</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text family="monospace"> = (2.2).(3.3)</rich_text>
+        <rich_text>
+
+</rich_text>
+        <rich_text weight="heavy">Miserable Fate of 1:</rich_text>
+        <rich_text> 1 is not a prime number. Because it doesn't have exactly 2 divisors. If 1 were a prime number there would be Chaos! Because then every number could have represented using product of primes in different ways. For example: </rich_text>
+        <rich_text family="monospace">6 = 2⋅3 = 2⋅3⋅1 = 2⋅3⋅1⋅1….</rich_text>
+        <rich_text> You got the idea right? 1 is not a composite number(according to Wiki) either. Because it has less than 2 divisors.
+
+</rich_text>
+        <rich_text weight="heavy">Primality Test:</rich_text>
+        <rich_text>
+	To check if a number is prime or not, we just have to check if a number between </rich_text>
+        <rich_text family="monospace">2</rich_text>
+        <rich_text> to </rich_text>
+        <rich_text family="monospace">√n</rich_text>
+        <rich_text> (inclding) divides the n.
+	Complexity: </rich_text>
+        <rich_text family="monospace">O(√n)</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+
+</rich_text>
+        <rich_text weight="heavy">Sieve of Eratosthenes:</rich_text>
+        <rich_text>
+	It is an easy and efficient way to find all the prime number under a specific number. 
+	</rich_text>
+        <rich_text weight="heavy">Procedure:</rich_text>
+        <rich_text>
+		1. The number which are devided by the current (For the initial its the first prime) prime,  flag them.
+		2. The next unflaged unmber would be current prime. Repeat the step 1 till square root of n
+		
+		Complexity: </rich_text>
+        <rich_text family="monospace">O(n log(log(n)))</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+
+</rich_text>
+        <rich_text weight="heavy">Smallest Prime Factor(SPF):</rich_text>
+        <rich_text> 
+	The </rich_text>
+        <rich_text style="italic">smallest</rich_text>
+        <rich_text> number greater than 1 that divides n is also the smallest prime factor of n.
+	Complexity: </rich_text>
+        <rich_text family="monospace">O(√n)</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+
+</rich_text>
+        <rich_text weight="heavy">Prime Factorization:</rich_text>
+        <rich_text>
+	Prime factorization is the decomposition of a number into a product of smaller prime numbers.
+	</rich_text>
+        <rich_text weight="heavy">Enumerate:</rich_text>
+        <rich_text>
+		The implementation is same as the smallest prime factor, just remove the factor from n and repeat the process.
+		Complexity: </rich_text>
+        <rich_text family="monospace">O(√n)</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+	</rich_text>
+        <rich_text weight="heavy">Prime Factorization Using Sieve of Eratosthenes:</rich_text>
+        <rich_text>
+		The implementation is same as the “Sieve of Eratosthenes”, just find the smallest prime fector for 1 to n and then find the prime fectors for specific number using the help from smallest prime factor.
+		Complexity: </rich_text>
+        <rich_text family="monospace">O(n log(log(n)))</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+
+</rich_text>
+        <rich_text weight="heavy">Prime Gap:</rich_text>
+        <rich_text>
+	A prime gap is the difference between two successive prime numbers. The n-th prime gap, denoted </rich_text>
+        <rich_text family="monospace">g</rich_text>
+        <rich_text family="monospace" scale="sub">n </rich_text>
+        <rich_text>or </rich_text>
+        <rich_text family="monospace">g(p</rich_text>
+        <rich_text family="monospace" scale="sub">n</rich_text>
+        <rich_text family="monospace">)</rich_text>
+        <rich_text> is the difference between the </rich_text>
+        <rich_text family="monospace">(n + 1)</rich_text>
+        <rich_text>-th and the </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text>-th prime numbers, i.e. g</rich_text>
+        <rich_text scale="sub">n</rich_text>
+        <rich_text> = p</rich_text>
+        <rich_text scale="sub">n + 1</rich_text>
+        <rich_text> - p</rich_text>
+        <rich_text scale="sub">n</rich_text>
+        <rich_text>. We have g</rich_text>
+        <rich_text scale="sub">1</rich_text>
+        <rich_text> = 1, g</rich_text>
+        <rich_text scale="sub">2</rich_text>
+        <rich_text> = g</rich_text>
+        <rich_text scale="sub">3</rich_text>
+        <rich_text> = 2, and g</rich_text>
+        <rich_text scale="sub">4</rich_text>
+        <rich_text> = 4. The sequence (g</rich_text>
+        <rich_text scale="sub">n</rich_text>
+        <rich_text>) of prime gaps has been extensively studied; however, many questions and conjectures remain unanswered. There is no exact formula for g</rich_text>
+        <rich_text scale="sub">n</rich_text>
+        <rich_text>. Cramer's conjecture states that </rich_text>
+        <rich_text family="monospace">g</rich_text>
+        <rich_text family="monospace" scale="sub">n</rich_text>
+        <rich_text family="monospace">=O(log(p</rich_text>
+        <rich_text family="monospace" scale="sub">n</rich_text>
+        <rich_text family="monospace">)</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text family="monospace">)</rich_text>
+        <rich_text> which is indeed very low.
+
+
+</rich_text>
+        <rich_text weight="heavy">Goldbach’s Conjecture (Two Primes with given Sum):</rich_text>
+        <rich_text>
+	Every even integer greater than 2 can be expressed as the sum of two primes.
+	Find the prime numbers using Sieve algorithm. Then one by one subtract a prime from N and then check if the difference is also a prime. If yes, then express it as a sum and keep a count.
+	
+	</rich_text>
+        <rich_text style="italic">Complexity:</rich_text>
+        <rich_text> </rich_text>
+        <rich_text family="monospace">O(n log(log(n)))</rich_text>
+        <rich_text>
+	Code Snippet:
+	</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+	
+
+</rich_text>
+        <rich_text weight="heavy">Related Problem:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text style="italic" weight="heavy">1. Find the next prime number greater than </rich_text>
+        <rich_text family="monospace" style="italic" weight="heavy">n</rich_text>
+        <rich_text style="italic" weight="heavy"> where </rich_text>
+        <rich_text family="monospace" style="italic" weight="heavy">n</rich_text>
+        <rich_text style="italic" weight="heavy"> can be up to </rich_text>
+        <rich_text family="monospace" style="italic" weight="heavy">10</rich_text>
+        <rich_text family="monospace" style="italic" scale="sup" weight="heavy">9</rich_text>
+        <rich_text style="italic" weight="heavy">.</rich_text>
+        <rich_text>
+	Solution: The first solution that pops up in your head is to brute force over all numbers </rich_text>
+        <rich_text family="monospace">&gt;n</rich_text>
+        <rich_text> until we find a prime. We can check if it is a prime or not in </rich_text>
+        <rich_text family="monospace">O(√n)</rich_text>
+        <rich_text>. According to Cramer's conjecture after roughly </rich_text>
+        <rich_text family="monospace">Olog(10</rich_text>
+        <rich_text family="monospace" scale="sup">9</rich_text>
+        <rich_text family="monospace">)</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text family="monospace"> ≈ 30</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text family="monospace"> ≈ 900</rich_text>
+        <rich_text> operation, we will hit a prime! So the complexity will be </rich_text>
+        <rich_text family="monospace">O(900⋅√n)</rich_text>
+        <rich_text> which is okay!
+	</rich_text>
+        <codebox char_offset="1213" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">bool isPrime(int n)
+{
+	for (int i = 2; i * i &lt;= n; i++)
+		if (n % i == 0)
+			return false;
+
+	return true;
+}</codebox>
+        <codebox char_offset="1592" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+
+const int N = 1e8 + 9;
+bool arr[N]; // Has lowest execution time compare to bitset and vector.
+// bitset&lt;N&gt; arr;
+// vector&lt;bool&gt; arr(N);
+
+int main()
+{
+	ll n;
+	cin &gt;&gt; n;
+	vector&lt;ll&gt; prime;
+
+	arr[0]=arr[1]=1;
+	for(ll i=2; i*i&lt;=n; i++)
+	{
+		if(!arr[i])
+		{
+			// we can start from both j=i or j=2, using i is more optimized but it wouldn't reduce much time complexity.
+			for(ll j=i; i*j&lt;=n; j++)
+			arr[i*j]=1;
+		}
+	}
+
+	for(ll i=0; i&lt;=n; i++) if(!arr[i]) prime.push_back(i);
+	for(auto it : prime) cout &lt;&lt; it &lt;&lt; " ";
+	cout &lt;&lt; endl;
+
+	return 0;
+}</codebox>
+        <codebox char_offset="1751" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">ll SPF(int n)
+{
+	for (int i = 2; i * i &lt;= n; i++)
+		if (n % i == 0)
+			return i;
+
+	return n;
+}</codebox>
+        <codebox char_offset="2034" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main()
+{
+	int n, m, tmp_n;
+
+	cin &gt;&gt; n;
+	tmp_n=n;
+	vector&lt;int&gt; v;
+	
+	for (int i = 2; i * i &lt;= n; i++)
+	{
+		if (n % i == 0)
+		{
+			while (n % i == 0)
+				v.push_back(i), n /= i;
+		}
+	}
+
+	if (n &gt; 1)
+		v.push_back(n);
+
+	cout &lt;&lt; "Prime fectorization of " &lt;&lt; tmp_n &lt;&lt; ": \n";
+	for (auto it : v)
+		cout &lt;&lt; it &lt;&lt; " ";
+
+	return 0;
+}</codebox>
+        <codebox char_offset="2339" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+#define endl "\n"
+
+const int N = 1e6 + 9;
+
+int main()
+{
+	ll n, q;
+	bool ok;
+
+	vector&lt;ll&gt; spf(N);
+	for (ll i = 2; i &lt; N; i++)
+		spf[i] = i;
+
+//	Sieve
+	vector&lt;bool&gt; flg(N);
+	for (ll i = 2; i * i &lt; N; i++)
+	{
+		if (!flg[i])
+		{
+			for (ll j = i; j &lt; N; j += i)
+				flg[j] = true, spf[j] = min(spf[j], i);
+		}
+	}
+
+	cin &gt;&gt; q;
+	while (q--)
+	{
+		cin &gt;&gt; n;
+		vector&lt;ll&gt; factors;
+
+		while (n &gt; 1)
+			factors.push_back(spf[n]), n /= spf[n];
+
+		for (auto it : factors)
+			cout &lt;&lt; it &lt;&lt; " ";
+		cout &lt;&lt; endl;
+	}
+
+	return 0;
+}</codebox>
+        <codebox char_offset="3191" justification="left" frame_width="90" frame_height="10" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+typedef unsigned long long ull;
+#define endl "\n"
+
+const ll N = 100 + 10;
+vector&lt;bool&gt; isPrime(N, true);
+vector&lt;ll&gt; primes;
+
+void seive()
+{
+	isPrime[0] = isPrime[1] = false;
+	for (ll i = 2; i * i &lt;= N; i++)
+	{
+		for (ll j = i + i; j &lt;= N; j += i)
+		{
+			isPrime[j] = false;
+		}
+	}
+
+	for (ll i = 0; i &lt; N; i++)
+	{
+		if (isPrime[i])
+			primes.push_back(i);
+	}
+}
+
+int main()
+{
+	ll n;
+	ll c = 0;
+	cin &gt;&gt; n;
+
+	seive();
+
+	for (ll i = 0; primes[i] &lt;= n / 2; i++)
+	{
+		if (isPrime[n - primes[i]])
+		{
+			cout &lt;&lt; primes[i] &lt;&lt; " + " &lt;&lt; n - primes[i] &lt;&lt; " = " &lt;&lt; n &lt;&lt; endl;;
+			c++;
+		}
+	}
+	cout &lt;&lt; c &lt;&lt; endl;
+
+	return 0;
+}</codebox>
+      </node>
+      <node name="Euler's Totient Function" unique_id="14" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1681589854" ts_lastsave="1682634849">
+        <rich_text weight="heavy">Euler's Totient Function:</rich_text>
+        <rich_text> Euler's totient function, also known as </rich_text>
+        <rich_text style="italic">phi-function</rich_text>
+        <rich_text> </rich_text>
+        <rich_text family="monospace" style="italic">φ(n)</rich_text>
+        <rich_text> , counts the number of integers between </rich_text>
+        <rich_text family="monospace" style="italic">1</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text family="monospace" style="italic">n</rich_text>
+        <rich_text>  </rich_text>
+        <rich_text style="italic">inclusive</rich_text>
+        <rich_text>, which are coprime to </rich_text>
+        <rich_text family="monospace" style="italic">n</rich_text>
+        <rich_text> . Two numbers are coprime if their greatest common divisor equals 1 ( 1 is considered to be coprime to any number).
+
+
+	Here are values of </rich_text>
+        <rich_text family="monospace" style="italic">φ(n)</rich_text>
+        <rich_text>  for the first few positive integers:	
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+	</rich_text>
+        <rich_text weight="heavy">Properties:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text weight="heavy">→</rich_text>
+        <rich_text> </rich_text>
+        <rich_text style="italic">n=1</rich_text>
+        <rich_text>
+			If n  is 1, then 1 itself is the only number which is coprime to it.
+				Therefore </rich_text>
+        <rich_text family="monospace">φ(1)=1</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text weight="heavy">→</rich_text>
+        <rich_text>	</rich_text>
+        <rich_text style="italic">n is prime </rich_text>
+        <rich_text>   	
+    		If n  is a prime number, then gcd(n, m) = 1  for all 1 ≤ m &lt; n . 
+    			Therefore, </rich_text>
+        <rich_text family="monospace">φ(n)=n-1</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text weight="heavy">→</rich_text>
+        <rich_text>	</rich_text>
+        <rich_text style="italic">n  is power of prime – </rich_text>
+        <rich_text family="monospace" style="italic">φ(n)= φ(p</rich_text>
+        <rich_text family="monospace" style="italic" scale="sup">a</rich_text>
+        <rich_text family="monospace" style="italic">)</rich_text>
+        <rich_text>
+			Since, n=p</rich_text>
+        <rich_text scale="sup">a</rich_text>
+        <rich_text>, we can be sure that gcd(p,n)≠1. Since both n and p are divisible by p. Therefore, the following numbers which are divisible by p are not coprime to n, p,2p,3p…p</rich_text>
+        <rich_text scale="sup">2</rich_text>
+        <rich_text>,(p+1)p,(p+2)p…(p</rich_text>
+        <rich_text scale="sup">2</rich_text>
+        <rich_text>)p,(p</rich_text>
+        <rich_text scale="sup">2</rich_text>
+        <rich_text>+1)p…(p</rich_text>
+        <rich_text scale="sup">a−1</rich_text>
+        <rich_text>)p. There are exactly p</rich_text>
+        <rich_text scale="sup">a</rich_text>
+        <rich_text>/p=p</rich_text>
+        <rich_text scale="sup">a</rich_text>
+        <rich_text>−1 numbers which are divisible by p. So, there are n–p</rich_text>
+        <rich_text scale="sup">a−1</rich_text>
+        <rich_text> numbers which are coprime to n. 
+				Hence, </rich_text>
+        <rich_text family="monospace">φ(n) = φ(p</rich_text>
+        <rich_text family="monospace" scale="sup">a</rich_text>
+        <rich_text family="monospace">) = n–(n/p) = p</rich_text>
+        <rich_text family="monospace" scale="sup">a</rich_text>
+        <rich_text family="monospace">–(p</rich_text>
+        <rich_text family="monospace" scale="sup">a</rich_text>
+        <rich_text family="monospace">/p) = p</rich_text>
+        <rich_text family="monospace" scale="sup">a</rich_text>
+        <rich_text family="monospace">(1–(1/p) = p</rich_text>
+        <rich_text family="monospace" scale="sup">a</rich_text>
+        <rich_text family="monospace">×((p–1)/p)</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text weight="heavy">→</rich_text>
+        <rich_text>	</rich_text>
+        <rich_text family="monospace" style="italic">φ()</rich_text>
+        <rich_text style="italic"> is Multiplicative – </rich_text>
+        <rich_text family="monospace" style="italic">φ(m × n)</rich_text>
+        <rich_text>
+			It means, if m and n are coprime, then </rich_text>
+        <rich_text family="monospace">φ</rich_text>
+        <rich_text>(m×n)=</rich_text>
+        <rich_text family="monospace">φ</rich_text>
+        <rich_text>(m)×</rich_text>
+        <rich_text family="monospace">φ</rich_text>
+        <rich_text>(n).
+			Let the prime factorization of </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text> be </rich_text>
+        <rich_text family="monospace">p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">a1</rich_text>
+        <rich_text family="monospace">p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace" scale="sup">a2</rich_text>
+        <rich_text family="monospace">…p</rich_text>
+        <rich_text family="monospace" scale="sub">k</rich_text>
+        <rich_text family="monospace" scale="sup">ak</rich_text>
+        <rich_text>. Now, obviously p</rich_text>
+        <rich_text scale="sub">i</rich_text>
+        <rich_text> nad p</rich_text>
+        <rich_text scale="sub">j </rich_text>
+        <rich_text>are coprime to each other. 
+			Since </rich_text>
+        <rich_text family="monospace">φ</rich_text>
+        <rich_text> function is multiplicative, we can simply rewrite the function as:
+				</rich_text>
+        <rich_text family="monospace">φ(n)=φ(p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">a1</rich_text>
+        <rich_text family="monospace">p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace" scale="sup">a2</rich_text>
+        <rich_text family="monospace">…p</rich_text>
+        <rich_text family="monospace" scale="sub">k</rich_text>
+        <rich_text family="monospace" scale="sup">ak</rich_text>
+        <rich_text family="monospace">)</rich_text>
+        <rich_text>
+				</rich_text>
+        <rich_text family="monospace">φ(n)=φ(p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">a1</rich_text>
+        <rich_text family="monospace">)×φ(p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace" scale="sup">a2</rich_text>
+        <rich_text family="monospace">)…×φ(p</rich_text>
+        <rich_text family="monospace" scale="sub">k</rich_text>
+        <rich_text family="monospace" scale="sup">ak</rich_text>
+        <rich_text family="monospace">)</rich_text>
+        <rich_text>
+			We can already calculate </rich_text>
+        <rich_text family="monospace">φ(p</rich_text>
+        <rich_text family="monospace" scale="sup">a</rich_text>
+        <rich_text family="monospace">)=p</rich_text>
+        <rich_text family="monospace" scale="sup">a</rich_text>
+        <rich_text family="monospace">×((p−1)/p)</rich_text>
+        <rich_text>. 
+			So our equationg becomes:
+				</rich_text>
+        <rich_text family="monospace">φ(n)=φ(p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">a1</rich_text>
+        <rich_text family="monospace">)×φ(p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace" scale="sup">a2</rich_text>
+        <rich_text family="monospace">)…×φ(p</rich_text>
+        <rich_text family="monospace" scale="sub">k</rich_text>
+        <rich_text family="monospace" scale="sup">ak</rich_text>
+        <rich_text family="monospace">)</rich_text>
+        <rich_text>
+				</rich_text>
+        <rich_text family="monospace">φ(n) = (p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">a1</rich_text>
+        <rich_text family="monospace">×((p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace">−1)/p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace">)) × (p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace" scale="sup">a2</rich_text>
+        <rich_text family="monospace">×((p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace">−1)/p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace">))………………… × (p</rich_text>
+        <rich_text family="monospace" scale="sub">k</rich_text>
+        <rich_text family="monospace" scale="sup">ak</rich_text>
+        <rich_text family="monospace">×((p</rich_text>
+        <rich_text family="monospace" scale="sub">k</rich_text>
+        <rich_text family="monospace">−1)/p</rich_text>
+        <rich_text family="monospace" scale="sub">k</rich_text>
+        <rich_text family="monospace">))</rich_text>
+        <rich_text>
+				</rich_text>
+        <rich_text family="monospace">φ(n) = (p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">a1</rich_text>
+        <rich_text family="monospace"> × p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace" scale="sup">a2</rich_text>
+        <rich_text family="monospace"> × p</rich_text>
+        <rich_text family="monospace" scale="sub">k</rich_text>
+        <rich_text family="monospace" scale="sup">ak</rich_text>
+        <rich_text family="monospace">) × (((p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace">−1)/p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace">) × ((p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace">−1)/p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace">)………………… × ((p</rich_text>
+        <rich_text family="monospace" scale="sub">k</rich_text>
+        <rich_text family="monospace">−1)/p</rich_text>
+        <rich_text family="monospace" scale="sub">k</rich_text>
+        <rich_text family="monospace">))</rich_text>
+        <rich_text>
+				</rich_text>
+        <rich_text family="monospace">φ(n) = n × (((p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace">−1)/p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace">) × ((p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace">−1)/p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace">)………………… × ((p</rich_text>
+        <rich_text family="monospace" scale="sub">k</rich_text>
+        <rich_text family="monospace">−1)/p</rich_text>
+        <rich_text family="monospace" scale="sub">k</rich_text>
+        <rich_text>
+				
+	
+	</rich_text>
+        <rich_text weight="heavy">Euler's Totient</rich_text>
+        <rich_text>:
+		</rich_text>
+        <rich_text weight="heavy">Using Prime Factorization:</rich_text>
+        <rich_text>
+			The idea is basically based on prime factorization.
+			Complexity: </rich_text>
+        <rich_text family="monospace">O(√n)</rich_text>
+        <rich_text>
+			</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+			</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+		
+		</rich_text>
+        <rich_text weight="heavy">Using Sieve of Eratosthenes (For a range):</rich_text>
+        <rich_text>
+			It is based on sieve algorithm. It is generally used for a range (1 to n) of numbers.
+			Complexity: </rich_text>
+        <rich_text family="monospace">O(n log(log(n)))</rich_text>
+        <rich_text>
+			</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+			</rich_text>
+        <rich_text justification="left"></rich_text>
+        <table char_offset="351" justification="left" col_min="70" col_max="70" col_widths="0,0">
+          <row>
+            <cell>1</cell>
+            <cell>1</cell>
+          </row>
+          <row>
+            <cell>2</cell>
+            <cell>1</cell>
+          </row>
+          <row>
+            <cell>3</cell>
+            <cell>2</cell>
+          </row>
+          <row>
+            <cell>4</cell>
+            <cell>2</cell>
+          </row>
+          <row>
+            <cell>5</cell>
+            <cell>4</cell>
+          </row>
+          <row>
+            <cell>6</cell>
+            <cell>2</cell>
+          </row>
+          <row>
+            <cell>7</cell>
+            <cell>6</cell>
+          </row>
+          <row>
+            <cell>8</cell>
+            <cell>4</cell>
+          </row>
+          <row>
+            <cell>9</cell>
+            <cell>6</cell>
+          </row>
+          <row>
+            <cell>10</cell>
+            <cell>4</cell>
+          </row>
+          <row>
+            <cell>11</cell>
+            <cell>10</cell>
+          </row>
+          <row>
+            <cell>12</cell>
+            <cell>4</cell>
+          </row>
+          <row>
+            <cell>13</cell>
+            <cell>12</cell>
+          </row>
+          <row>
+            <cell>14</cell>
+            <cell>6</cell>
+          </row>
+          <row>
+            <cell>15</cell>
+            <cell>8</cell>
+          </row>
+          <row>
+            <cell>16</cell>
+            <cell>8</cell>
+          </row>
+          <row>
+            <cell>17</cell>
+            <cell>16</cell>
+          </row>
+          <row>
+            <cell>18</cell>
+            <cell>6</cell>
+          </row>
+          <row>
+            <cell>19</cell>
+            <cell>18</cell>
+          </row>
+          <row>
+            <cell>20</cell>
+            <cell>8</cell>
+          </row>
+          <row>
+            <cell>n</cell>
+            <cell>phi(n)</cell>
+          </row>
+        </table>
+        <codebox char_offset="1855" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">int phi(int n) {
+	int result = n;
+	for (int i = 2; i * i &lt;= n; i++)
+	{
+		if (n % i == 0)
+		{
+			while (n % i == 0)
+				n /= i;
+			result -= result / i;
+		}
+	}
+	if (n &gt; 1)
+		result -= result / n;
+	return result;
+}</codebox>
+        <codebox char_offset="2046" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">void sieve_phi(int n) {
+	vector&lt;int&gt; phi(n + 1);
+	for (int i = 0; i &lt;= n; i++)
+		phi[i] = i;
+	for (int i = 2; i &lt;= n; i++)
+	{
+		if (phi[i] == i)
+		{
+			for (int j = i; j &lt;= n; j += i)
+				phi[j] -= phi[j] / i;
+		}
+	}
+}</codebox>
+      </node>
+      <node name="Divisor" unique_id="10" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1669301502" ts_lastsave="1687786889">
+        <rich_text weight="heavy">Divisor:</rich_text>
+        <rich_text> In mathematics, a divisor of an integer </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text>, also called a factor of </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text>, is an integer </rich_text>
+        <rich_text family="monospace">m</rich_text>
+        <rich_text> that may be multiplied by some integer to produce </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text>. In this case, one also says that </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text> is a multiple of </rich_text>
+        <rich_text family="monospace">m</rich_text>
+        <rich_text>. An integer </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text> is divisible or evenly divisible by another integer </rich_text>
+        <rich_text family="monospace">m</rich_text>
+        <rich_text> if </rich_text>
+        <rich_text family="monospace">m</rich_text>
+        <rich_text> is a divisor of </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text>; this implies dividing </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text> by </rich_text>
+        <rich_text family="monospace">m</rich_text>
+        <rich_text> leaves no remainder.
+
+</rich_text>
+        <rich_text weight="heavy">Enumerating Divisors</rich_text>
+        <rich_text>
+	If we have to find the divisors of </rich_text>
+        <rich_text weight="heavy">n</rich_text>
+        <rich_text>, we only have to enamurate till </rich_text>
+        <rich_text family="monospace">√n</rich_text>
+        <rich_text>.
+	
+	Suppose take </rich_text>
+        <rich_text family="monospace">n=36</rich_text>
+        <rich_text>,
+		</rich_text>
+        <rich_text family="monospace">1 X 36</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text family="monospace">2 X 18</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text family="monospace">3 X 12</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text family="monospace">4 X 9</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text family="monospace">6 X 6</rich_text>
+        <rich_text>
+		So the divisors are </rich_text>
+        <rich_text family="monospace">1, 2, 3, 4, 6, 9, 12, 18, 36</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text family="monospace">√36 = 6</rich_text>
+        <rich_text>.
+		Terefore if we enamurate till  </rich_text>
+        <rich_text family="monospace">√n</rich_text>
+        <rich_text> we will be able to find all the divisors of </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text>.
+		Complexity: </rich_text>
+        <rich_text family="monospace">O(√n)</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+	
+	
+</rich_text>
+        <rich_text weight="heavy">Odd Number of Divisors</rich_text>
+        <rich_text>
+	The </rich_text>
+        <rich_text family="monospace" style="italic" weight="heavy">SQUARE</rich_text>
+        <rich_text> numbers has only odd number of divisors.
+
+	For example,
+	</rich_text>
+        <rich_text justification="fill"></rich_text>
+        <rich_text>
+	From the table we can see that only square numbers 1, 4, 9 has odd numbers of divisors.
+
+
+</rich_text>
+        <rich_text weight="heavy">Number of Divisors:</rich_text>
+        <rich_text>
+	Enumerate</rich_text>
+        <rich_text weight="heavy">:</rich_text>
+        <rich_text>
+		Enumerate the divisors of n and return the count.
+		Complexity: </rich_text>
+        <rich_text family="monospace">O(√n)</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+	
+	</rich_text>
+        <rich_text weight="heavy">Using Prime Factorization:</rich_text>
+        <rich_text>	
+		It should be obvious that the prime factorization of a divisor  </rich_text>
+        <rich_text family="monospace">d</rich_text>
+        <rich_text>  has to be a subset of the prime factorization of  </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text> , e.g.  </rich_text>
+        <rich_text family="monospace">6=2.3</rich_text>
+        <rich_text>  is a divisor of  </rich_text>
+        <rich_text family="monospace">60=2</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text family="monospace">.3.5</rich_text>
+        <rich_text> . So we only need to find all different subsets of the prime factorization of  </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text> . So if a prime factor  </rich_text>
+        <rich_text family="monospace">p</rich_text>
+        <rich_text>  appears  </rich_text>
+        <rich_text family="monospace">e</rich_text>
+        <rich_text>  times in the prime factorization of  </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text> , then we can use the factor  </rich_text>
+        <rich_text family="monospace">p</rich_text>
+        <rich_text>  up to  </rich_text>
+        <rich_text family="monospace">e</rich_text>
+        <rich_text>  times in the subset. Which means we have  </rich_text>
+        <rich_text family="monospace">e+1</rich_text>
+        <rich_text>  choices.
+		Therefore if the prime factorization of  </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text>  is </rich_text>
+        <rich_text family="monospace">p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">e1</rich_text>
+        <rich_text family="monospace">.p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace" scale="sup">e2</rich_text>
+        <rich_text family="monospace">....p</rich_text>
+        <rich_text family="monospace" scale="sub">k</rich_text>
+        <rich_text family="monospace" scale="sup">ek</rich_text>
+        <rich_text scale="sup"> </rich_text>
+        <rich_text>, where  </rich_text>
+        <rich_text family="monospace">p</rich_text>
+        <rich_text family="monospace" scale="sub">i</rich_text>
+        <rich_text>  are distinct prime numbers, then the number of divisors is:
+			</rich_text>
+        <rich_text family="monospace">NOD(n)=(e</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace">+1).(e</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace">+1)...(e</rich_text>
+        <rich_text family="monospace" scale="sub">k</rich_text>
+        <rich_text family="monospace">+1)</rich_text>
+        <rich_text>
+		Complexity: </rich_text>
+        <rich_text family="monospace">O(√n)</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>					
+	
+	</rich_text>
+        <rich_text weight="heavy">Using Sieve of Eratosthenes (For a range):</rich_text>
+        <rich_text>
+		It is based on sieve agorithm. It is generally used for a range (1 to n) of numbers.
+		Complexity: </rich_text>
+        <rich_text family="monospace">O(n log(log(n)))</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+	
+	</rich_text>
+        <rich_text weight="heavy">Upper Bound of Number of Divisors:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text family="monospace">NOD(n) ≤ n</rich_text>
+        <rich_text>
+	Further  improvement, </rich_text>
+        <rich_text family="monospace">NOD(n) ≤ (n/2)+1</rich_text>
+        <rich_text>
+	Further  improvement, </rich_text>
+        <rich_text family="monospace">NOD(n) ≤ 2.√n</rich_text>
+        <rich_text>
+	Further  improvement, </rich_text>
+        <rich_text family="monospace">NOD(n) ≈ 2.</rich_text>
+        <rich_text family="monospace" scale="sup">3</rich_text>
+        <rich_text family="monospace">√n</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text family="monospace">2.</rich_text>
+        <rich_text family="monospace" scale="sup">3</rich_text>
+        <rich_text family="monospace">√n</rich_text>
+        <rich_text> can be used safely as the upper bound of </rich_text>
+        <rich_text family="monospace">NOD</rich_text>
+        <rich_text>. Apparently, this approximation has been tested for </rich_text>
+        <rich_text family="monospace">N≤10</rich_text>
+        <rich_text family="monospace" scale="sup">18</rich_text>
+        <rich_text>, which is large enough to be used in programming contests.
+		
+		
+</rich_text>
+        <rich_text weight="heavy">Sum of Divisors:</rich_text>
+        <rich_text>
+
+	</rich_text>
+        <rich_text weight="heavy">Using Prime Factorization:</rich_text>
+        <rich_text>
+		Using prime factorization concept sum of the divisors can be found very easily. 
+		If only prime factor on </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text> is </rich_text>
+        <rich_text family="monospace">p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">e1</rich_text>
+        <rich_text> then the divisors are </rich_text>
+        <rich_text family="monospace">1, p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace">, p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text family="monospace"> , p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">3</rich_text>
+        <rich_text family="monospace">, .... p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">e1</rich_text>
+        <rich_text>. Then sum of the divisors is </rich_text>
+        <rich_text family="monospace">1+p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace">+p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text family="monospace">+p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">3</rich_text>
+        <rich_text family="monospace">+....+p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">e1</rich_text>
+        <rich_text family="monospace"> = (p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">e1+1</rich_text>
+        <rich_text family="monospace">-1)/(p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace">-1)</rich_text>
+        <rich_text>.
+		If the prime factorization of </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text> is </rich_text>
+        <rich_text family="monospace">p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">e1</rich_text>
+        <rich_text family="monospace">.p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace" scale="sup">e2</rich_text>
+        <rich_text> then the sum of the divisors is </rich_text>
+        <rich_text family="monospace">(1+p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace">+p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text family="monospace">+p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">3</rich_text>
+        <rich_text family="monospace">+....+p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">e1</rich_text>
+        <rich_text family="monospace">).(1+p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace">+p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text family="monospace">+p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace" scale="sup">3</rich_text>
+        <rich_text family="monospace">+....+p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace" scale="sup">e2</rich_text>
+        <rich_text family="monospace">) = ((p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace" scale="sup">e1+1</rich_text>
+        <rich_text family="monospace">-1)/(p</rich_text>
+        <rich_text family="monospace" scale="sub">1</rich_text>
+        <rich_text family="monospace">-1)).((p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace" scale="sup">e2+1</rich_text>
+        <rich_text family="monospace">-1)/(p</rich_text>
+        <rich_text family="monospace" scale="sub">2</rich_text>
+        <rich_text family="monospace">-1))</rich_text>
+        <rich_text>.
+		A similar argument can be made if there are more then two distinct prime factors.
+	
+	</rich_text>
+        <rich_text weight="heavy">Using Sieve of Eratosthenes (for a range):</rich_text>
+        <rich_text>
+		It is based on seive agorithm. It is generally used for a range (1 to n) of numbers.
+		Complexity: </rich_text>
+        <rich_text family="monospace">O(n log(log(n)))</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+
+</rich_text>
+        <rich_text weight="heavy">Legendre's formula (Given p and n, find the largest x such that p^x divides n!)</rich_text>
+        <rich_text>.
+	• n! is multiplication of {1, 2, 3, 4, …n}. 
+	• How many numbers in {1, 2, 3, 4, ….. n} are divisible by p?  
+			→ Every p’th number is divisible by p in {1, 2, 3, 4, ….. n}. Therefore in n!, there are ⌊n/p⌋ numbers divisible by p. So we know that the value of x (largest power of p that divides n!) is at-least ⌊n/p⌋.  
+	• Can x be larger than ⌊n/p⌋ ?  
+			→ Yes, there may be numbers which are divisible by p</rich_text>
+        <rich_text scale="sup">2</rich_text>
+        <rich_text>, p</rich_text>
+        <rich_text scale="sup">3</rich_text>
+        <rich_text>, …  
+	• How many numbers in {1, 2, 3, 4, ….. n} are divisible by p</rich_text>
+        <rich_text scale="sup">2</rich_text>
+        <rich_text>, p</rich_text>
+        <rich_text scale="sup">3</rich_text>
+        <rich_text>, …?  
+			→ There are ⌊n/(p</rich_text>
+        <rich_text scale="sup">2</rich_text>
+        <rich_text>)⌋ numbers divisible by p</rich_text>
+        <rich_text scale="sup">2</rich_text>
+        <rich_text> (Every p</rich_text>
+        <rich_text scale="sup">2</rich_text>
+        <rich_text>‘th number would be divisible). Similarly, there are ⌊n/(p</rich_text>
+        <rich_text scale="sup">3</rich_text>
+        <rich_text>)⌋ numbers divisible by p</rich_text>
+        <rich_text scale="sup">3</rich_text>
+        <rich_text> and so on. 
+	• What is the largest possible value of x?  
+			→ So the largest possible power is ⌊n/p⌋ + ⌊n/(p</rich_text>
+        <rich_text scale="sup">2</rich_text>
+        <rich_text>)⌋ + ⌊n/(p</rich_text>
+        <rich_text scale="sup">3</rich_text>
+        <rich_text>)⌋ + ……  Note that we add only ⌊n/(p</rich_text>
+        <rich_text scale="sup">2</rich_text>
+        <rich_text>)⌋ only once (not twice) as one p is already considered by expression ⌊n/p⌋. Similarly, we consider ⌊n/(p</rich_text>
+        <rich_text scale="sup">3</rich_text>
+        <rich_text>)⌋ (not thrice). 
+
+</rich_text>
+        <rich_text style="italic">Complexity:</rich_text>
+        <rich_text> </rich_text>
+        <rich_text family="monospace">O(log</rich_text>
+        <rich_text family="monospace" scale="sub">p</rich_text>
+        <rich_text family="monospace">n)</rich_text>
+        <rich_text>
+</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+		
+	
+
+</rich_text>
+        <rich_text weight="heavy">Related Problem:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text style="italic" weight="heavy">1. Find the numbers under n which has odd number of divisors.</rich_text>
+        <rich_text>
+		Solution: The number would be 1 to square root of n.
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+	
+	</rich_text>
+        <rich_text weight="heavy">2. Which number has exactly 3 divisors?</rich_text>
+        <rich_text>				
+	Solution: The square of a prime number has only exactly 3 divisors. According to prime fectorization if and only if </rich_text>
+        <rich_text family="monospace">n=p</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text> only then </rich_text>
+        <rich_text family="monospace">NOD(n)=(2+1)=3</rich_text>
+        <rich_text>, where </rich_text>
+        <rich_text family="monospace">p</rich_text>
+        <rich_text> is the prime fector of </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text>.
+	
+	</rich_text>
+        <rich_text weight="heavy">3. Which number has exactly 4 divisors?</rich_text>
+        <rich_text>
+	Solution: The qube of a prime number or multiplication of 2 prime number has only 4 divisors. According to prime fectorization if </rich_text>
+        <rich_text family="monospace">n=p</rich_text>
+        <rich_text family="monospace" scale="sup">3</rich_text>
+        <rich_text> or </rich_text>
+        <rich_text family="monospace">n=p.q</rich_text>
+        <rich_text> only then </rich_text>
+        <rich_text family="monospace">NOD(n)=(3+1)=4</rich_text>
+        <rich_text> or </rich_text>
+        <rich_text family="monospace">NOD(n)=(1+1).(1+1)=(2.2)=4</rich_text>
+        <rich_text>.
+	
+</rich_text>
+        <rich_text weight="heavy">	4. Count trailing zeroes in factorial of a number.</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text style="italic">Solution:</rich_text>
+        <rich_text> A trailing zero is always produced by prime factors 2 and 5. So we have to count the number of 5s and 2s in the prime factors of n! and take the minimum as answer. If we observe, then we will see that the number of 5s is always less than or equal to the number os 2s. Hence, if we can count the number of 5s then our job is done. We can use </rich_text>
+        <rich_text style="italic" weight="heavy">Legendre's Formula</rich_text>
+        <rich_text> to find the number of 5s in the prime fectors of n!.
+	</rich_text>
+        <rich_text style="italic">Complexity:</rich_text>
+        <rich_text> </rich_text>
+        <rich_text family="monospace">O(log</rich_text>
+        <rich_text family="monospace" scale="sub">5</rich_text>
+        <rich_text family="monospace">n)</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+		
+</rich_text>
+        <rich_text weight="heavy">	5. Count Divisors of factorial.</rich_text>
+        <rich_text>
+</rich_text>
+        <rich_text style="italic">	Solutions:</rich_text>
+        <rich_text>
+		Using Seive algorithm find the primes less then or equal to the number of factorial.
+		Apply the Legendre’s formula for all the primes found in previous step.
+	</rich_text>
+        <rich_text style="italic">Complexity:</rich_text>
+        <rich_text> </rich_text>
+        <rich_text family="monospace">O(n log(log(n)))</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <codebox char_offset="690" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">void (long long int n)
+{
+	for (ll i = 1; i * i &lt;= n; i++) // i * i &lt;= n is same as i &lt;= sqrt(n) but not safe because of double precision
+	{
+		if (n % i == 0)
+		{
+			cout &lt;&lt; i &lt;&lt; " ";
+			if (n / i != i)
+				cout &lt;&lt; (n / i) &lt;&lt; " ";
+		}
+	}
+}</codebox>
+        <table char_offset="788" justification="fill" col_min="70" col_max="70" col_widths="0,75,0">
+          <row>
+            <cell>1</cell>
+            <cell>1</cell>
+            <cell>1</cell>
+          </row>
+          <row>
+            <cell>2</cell>
+            <cell>1, 2</cell>
+            <cell>2</cell>
+          </row>
+          <row>
+            <cell>3</cell>
+            <cell>1, 3</cell>
+            <cell>2</cell>
+          </row>
+          <row>
+            <cell>4</cell>
+            <cell>1, 2, 4</cell>
+            <cell>3</cell>
+          </row>
+          <row>
+            <cell>5</cell>
+            <cell>1, 5</cell>
+            <cell>2</cell>
+          </row>
+          <row>
+            <cell>6</cell>
+            <cell>1, 2, 3, 6</cell>
+            <cell>4</cell>
+          </row>
+          <row>
+            <cell>7</cell>
+            <cell>1, 7</cell>
+            <cell>2</cell>
+          </row>
+          <row>
+            <cell>8</cell>
+            <cell>1, 2, 4, 8</cell>
+            <cell>4</cell>
+          </row>
+          <row>
+            <cell>9</cell>
+            <cell>1, 3, 9</cell>
+            <cell>3</cell>
+          </row>
+          <row>
+            <cell>10</cell>
+            <cell>1, 2, 5, 10</cell>
+            <cell>4</cell>
+          </row>
+          <row>
+            <cell>--Number--</cell>
+            <cell>--Divisors--</cell>
+            <cell>--Count--</cell>
+          </row>
+        </table>
+        <codebox char_offset="1003" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">int NOD(int n)
+{
+	int nod=0;
+	for (ll i = 1; i * i &lt;= n; i++)
+	{
+		if (n % i == 0)
+		{
+			nod++;
+			if (n / i != i)
+				nod++;
+		}
+	}
+	return nod;
+}</codebox>
+        <codebox char_offset="1668" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">int NODPF(int n)
+{
+	int nod=1, p;
+	for (ll i = 2; i * i &lt;= n; i++)
+	{
+		if (n % i == 0)
+		{
+			p = 0;
+			while (n % i == 0)
+				p++, n /= i;
+			p++;
+			nod *= p;
+		}
+	}
+
+	if (n &gt; 1)
+		nod *= 2;
+
+	return nod;
+}</codebox>
+        <codebox char_offset="1857" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+typedef unsigned long long ull;
+
+int main()
+{
+	ll n;
+	cin &gt;&gt; n;
+	vector&lt;ll&gt; nod(n + 10);
+
+	// .for (ll i = 1; i &lt;= n; i++)
+	//  	for (ll j = 1; i * j &lt;= n; j++)
+	//  		nod[i * j]++;
+
+	// More optimized but little bit complex to understand
+	for (ll i = 1; i * i &lt;= n; i++)
+	{
+		for (ll j = i; i * j &lt;= n; j++)
+		{
+			if (i == j)
+				nod[i * j]++;
+			else
+				nod[i * j] += 2;
+		}
+	}
+
+	for (ll i = 1; i &lt;= n; i++)
+		cout &lt;&lt; i &lt;&lt; " --&gt; " &lt;&lt; nod[i] &lt;&lt; endl;
+
+	return 0;
+}</codebox>
+        <codebox char_offset="2926" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+typedef unsigned long long ull;
+
+int main()
+{
+	ll n;
+	cin &gt;&gt; n;
+	vector&lt;ll&gt; sod(n + 10);
+
+	//..	for (ll i = 1; i &lt;= n; i++)
+	//..		for (ll j = 1; i * j &lt;= n; j++)
+	//..			sod[i * j] += i;
+
+	// More optimized but little bit complex to understand
+	for (ll i = 1; i * i &lt;= n; i++)
+	{
+		for (ll j = i; i * j &lt;= n; j++)
+		{
+			if (i == j)
+				sod[i * j]+=i;
+			else
+				sod[i * j] += (i+j);
+		}
+	}
+
+	for (ll i = 1; i &lt;= n; i++)
+		cout &lt;&lt; i &lt;&lt; " --&gt; " &lt;&lt; sod[i] &lt;&lt; endl;
+
+	return 0;
+}</codebox>
+        <codebox char_offset="3968" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+typedef unsigned long long ull;
+#define endl "\n"
+
+// Using recursion
+// ll largest_power(ll n, ll p)
+// {
+//     if (n == 0)
+//         return 0;
+//     return n / p + largest_power(n / p, p);
+// }
+
+ll largest_power(ll n, ll p)
+{
+	ll pw = 0;
+	while (n)
+	{
+		n /= p;
+		pw += n;
+	}
+
+	return pw;
+}
+
+int main()
+{
+	ll n, p;
+	cin &gt;&gt; n &gt;&gt; p;
+	cout &lt;&lt; largest_power(n, p) &lt;&lt; endl;
+
+	return 0;
+}</codebox>
+        <codebox char_offset="4129" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main()
+{
+	int n;
+	cin &gt;&gt; n;
+
+	cout &lt;&lt; "Count of numbers till " &lt;&lt; n &lt;&lt; " which has odd number of divisors: " &lt;&lt; sqrt(n) &lt;&lt; endl;
+	cout &lt;&lt; "The numbers are: ";
+	for (int i = 1; i * i &lt;= n; i++) // i * i &lt;= n is same as i &lt;= sqrt(n) but not safe because of double precision
+		cout &lt;&lt; i &lt;&lt; " ";
+
+	return 0;
+}</codebox>
+        <codebox char_offset="5121" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+typedef unsigned long long ull;
+#define endl "\n"
+
+ll trailing_zeros(ll n)
+{
+	if (n == 0)
+		return 0;
+	return n / 5 + trailing_zeros(n / 5);
+}
+
+int main()
+{
+	ll n;
+	cin &gt;&gt; n;
+	cout &lt;&lt; trailing_zeros(n) &lt;&lt; endl;
+
+	return 0;
+}</codebox>
+        <codebox char_offset="5379" justification="left" frame_width="90" frame_height="10" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+typedef unsigned long long ull;
+#define endl "\n"
+
+const ll N = 100 + 10;
+vector&lt;bool&gt; isPrime(N, true);
+vector&lt;ll&gt; primes;
+
+void seive()
+{
+	isPrime[0] = isPrime[1] = false;
+	for (ll i = 2; i * i &lt;= N; i++)
+	{
+		for (ll j = i + i; j &lt;= N; j += i)
+		{
+			isPrime[j] = false;
+		}
+	}
+
+	for (ll i = 0; i &lt; N; i++)
+	{
+		if (isPrime[i])
+			primes.push_back(i);
+	}
+}
+
+int main()
+{
+	ll n;
+	cin &gt;&gt; n;
+	seive();
+
+	ll nod = 1;
+	for (ll i = 0; i &lt; primes.size() &amp;&amp; primes[i] &lt;= n; i++)
+	{
+		ll p = 0, x = n;
+		while (x)
+		{
+			x = x / primes[i];
+			p += x;
+		}
+		p++;
+		nod *= p;
+	}
+
+	cout &lt;&lt; nod &lt;&lt; endl;
+
+	return 0;
+}</codebox>
+      </node>
+      <node name="Divisibility" unique_id="15" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1682634801" ts_lastsave="1688141703">
+        <rich_text weight="heavy">Divisibility by 2:</rich_text>
+        <rich_text> If the last digit contains the digit </rich_text>
+        <rich_text family="monospace">0, 2, 4, 6, 8</rich_text>
+        <rich_text> then the number is divisible by 2.
+
+</rich_text>
+        <rich_text weight="heavy">Divisibility by 5:</rich_text>
+        <rich_text> If the last digit contains the digit </rich_text>
+        <rich_text family="monospace">0, 5</rich_text>
+        <rich_text> then the number is divisible by 5.
+
+</rich_text>
+        <rich_text weight="heavy">Divisibility by 3:</rich_text>
+        <rich_text> If the digit-sum is divisible by </rich_text>
+        <rich_text family="monospace">3</rich_text>
+        <rich_text> then the number is divisible by 3.
+
+</rich_text>
+        <rich_text weight="heavy">Divisibility by 9:</rich_text>
+        <rich_text> If the digit-sum is divisible by </rich_text>
+        <rich_text family="monospace">3</rich_text>
+        <rich_text> then the number is divisible by 9.
+
+</rich_text>
+        <rich_text weight="heavy">Digit-Sum Divisibility Property:</rich_text>
+        <rich_text> As 3 or 9 divide base (10) then the remainder is 1. Because of this property that if we devide the base with any number and the remainder is 1 then for those number and base the digit-sum divisibility comes in. 
+		For exampel if the base is 31 then,
+			31%2=1
+			31%3=1
+			31%5=1
+			31%6=1
+			31%10=1
+			31%15=1
+			31%30=1
+			
+			So for 31 based numbers if the digit-sum is divisible by 2 then the number is also divisible by 2 also. Same goes for 3, 5, 6, 10, 15, 30.
+
+</rich_text>
+        <rich_text weight="heavy">Divisibility by 4:</rich_text>
+        <rich_text> If the number formed by the last two digit of a number is divisible by 4 then the number is divisible by 4.
+	Beacuse every exponential number of 10 () except 1→(10</rich_text>
+        <rich_text scale="sup">0</rich_text>
+        <rich_text>) and 10→(10</rich_text>
+        <rich_text scale="sup">1</rich_text>
+        <rich_text>) is divisible by 4. So 100 is divisible by 4. Hence, every other number divisible by 100 is also divisible by 4 also. So if the remainder of a number divided by 100 is divided by 4 then the number is also divided by 4.
+		So for example 	4124 = 41*100 + 24. Here, 41*100 is divisible by 4 as 100 is divisible by 4. Hence we have to check 24 is divisible by 4 or not.
+		Another exampel 	51234 = 512*100 + 34. Here 512*100 is divisible by 4 as 100 is divisible by 4. Hence we have to check 34 is divisible by 4 or not.
+
+</rich_text>
+        <rich_text weight="heavy">Divisibility by 6:</rich_text>
+        <rich_text> The number which is divisible by all the prime factor of 6 → (2, 3) is also divisible by 6.
+
+</rich_text>
+        <rich_text weight="heavy">Prime Factor Divisibility Property:</rich_text>
+        <rich_text> If </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text> is divided by all the prime factor of </rich_text>
+        <rich_text family="monospace">x</rich_text>
+        <rich_text>, then </rich_text>
+        <rich_text family="monospace">n</rich_text>
+        <rich_text> is divisible by </rich_text>
+        <rich_text family="monospace">x</rich_text>
+        <rich_text> also.
+	For example all the number divisible by 30 is also divisible the prime factor of 30 → (2, 3, 5).
+	
+</rich_text>
+        <rich_text weight="heavy">Divisibility by 11:</rich_text>
+        <rich_text> Sum the odd positioned </rich_text>
+        <rich_text style="italic">(from right)</rich_text>
+        <rich_text> digit and substract the even positioned </rich_text>
+        <rich_text style="italic">(from right)</rich_text>
+        <rich_text> digit. If the result is divisible by the 11 then the number is divisible by 11 also.
+	10%11=10 or we can also say that 10%11=-1 (anti clockwise). 
+	So, 1234%11 = (1*10</rich_text>
+        <rich_text scale="sup">3</rich_text>
+        <rich_text> + 2*10</rich_text>
+        <rich_text scale="sup">2</rich_text>
+        <rich_text> + 3*10</rich_text>
+        <rich_text scale="sup">1</rich_text>
+        <rich_text> + 4)%11
+						  = 1*(-1)</rich_text>
+        <rich_text scale="sup">3</rich_text>
+        <rich_text> + 2*(-1)</rich_text>
+        <rich_text scale="sup">2</rich_text>
+        <rich_text> + 3*(-1)</rich_text>
+        <rich_text scale="sup">1</rich_text>
+        <rich_text> + 4
+						  = -1 + 2 - 3 + 4
+    	Hence, odd positioned </rich_text>
+        <rich_text style="italic">(from right)</rich_text>
+        <rich_text> digit should be added and even positioned </rich_text>
+        <rich_text style="italic">(from right)</rich_text>
+        <rich_text> digit should be substract. Then the absulute value of the result should be checked that if it is divisible by 11 or not.
+	For example 12347253, |3-5+2-7+4-3+2-1|=|-5|. If the result is divisible 11 then number is divisible 11.
+	 
+
+</rich_text>
+        <rich_text weight="heavy">Divisibility and Large Numbers</rich_text>
+        <rich_text>
+	How to check if a number </rich_text>
+        <rich_text style="italic">a</rich_text>
+        <rich_text>≤10</rich_text>
+        <rich_text justification="left" scale="sup">100000</rich_text>
+        <rich_text> is divisible by </rich_text>
+        <rich_text style="italic">b</rich_text>
+        <rich_text>≤10</rich_text>
+        <rich_text justification="left" scale="sup">9</rich_text>
+        <rich_text>?.	
+		In this case we will enumerate from first to last </rich_text>
+        <rich_text style="italic">(from left)</rich_text>
+        <rich_text> digit and check for the modulo.   
+			If a large number </rich_text>
+        <rich_text family="monospace" style="italic">abcde</rich_text>
+        <rich_text> and check whether it is divisible by </rich_text>
+        <rich_text family="monospace" style="italic">x</rich_text>
+        <rich_text> then,
+				I1 → (0*10)%x + a%x
+				I2 → (I1*10)%x + b%x
+				I3 → (I2*10)%x + c%x
+				I4 → (I3*10)%x + d%x
+				I5 → (I4*10)%x + e%x
+				
+			Complexity: </rich_text>
+        <rich_text family="monospace">O(n)</rich_text>
+        <rich_text>
+			</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+
+</rich_text>
+        <rich_text weight="heavy">K Consecutive Divisibility</rich_text>
+        <rich_text> 
+</rich_text>
+        <rich_text weight="heavy">Problem:</rich_text>
+        <rich_text> You are given an integer </rich_text>
+        <rich_text family="monospace">n (1≤n≤100)</rich_text>
+        <rich_text>. Find an integer array a</rich_text>
+        <rich_text scale="sub">1</rich_text>
+        <rich_text>​,a</rich_text>
+        <rich_text scale="sub">2</rich_text>
+        <rich_text>​,…,a</rich_text>
+        <rich_text scale="sub">n</rich_text>
+        <rich_text>​ of length n such that for each subarray, the product of the elements of that subarray is divisible by the length of the subarray. All ai​ should be ≤10</rich_text>
+        <rich_text scale="sup">9</rich_text>
+        <rich_text>. 
+	</rich_text>
+        <rich_text weight="heavy">Theorem:</rich_text>
+        <rich_text> The product of every </rich_text>
+        <rich_text family="monospace">k</rich_text>
+        <rich_text> consecutive number is divisible by </rich_text>
+        <rich_text family="monospace">k</rich_text>
+        <rich_text>. 
+		1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+			Product of every 2 consecutive number is divisible by 2, because in every 2 consecutive number there is at least a number which is divisible by 2.
+			Product of every 3 consecutive number is divisible by 3, because in every 3 consecutive number there is at least a number which is divisible by 3.
+			Product of every 4 consecutive number is divisible by 4, because in every 4 consecutive number there is at least a number which is divisible by 4.
+			Product of every 5 consecutive number is divisible by 5, because in every 5 consecutive number there is at least a number which is divisible by 5.
+
+
+</rich_text>
+        <rich_text weight="heavy">Divisible by All:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text weight="heavy">Problem 1:</rich_text>
+        <rich_text> Count the numbers between [L,R] which are divisible by m.
+		</rich_text>
+        <rich_text weight="heavy">Solution:</rich_text>
+        <rich_text> </rich_text>
+        <rich_text family="monospace">⌊R/m⌋ - ⌊L/m⌋ </rich_text>
+        <rich_text>
+
+	</rich_text>
+        <rich_text weight="heavy">Problem 2:</rich_text>
+        <rich_text> How to check if a number x is divisible by both a and b?
+		</rich_text>
+        <rich_text weight="heavy">Solution:</rich_text>
+        <rich_text> If x is divisible by lcm(x,y), then x is divisible by both x and y.
+
+	</rich_text>
+        <rich_text weight="heavy">Problem 3:</rich_text>
+        <rich_text> How to check if a number x is divisible by all a, b and c?
+		</rich_text>
+        <rich_text weight="heavy">Solution:</rich_text>
+        <rich_text> If x is divisible by lcm(x,y,z), then x is divisible by all x, y and z.
+
+	</rich_text>
+        <rich_text weight="heavy">Problem 4:</rich_text>
+        <rich_text> Counts numbers in between [L,R] which are divisible by all array elements of the given array of size n. 
+		</rich_text>
+        <rich_text weight="heavy">Solution:</rich_text>
+        <rich_text> </rich_text>
+        <rich_text family="monospace">⌊R/lcm(array elements)⌋ - ⌊L/lcm(array elements)⌋ </rich_text>
+        <rich_text>
+
+	</rich_text>
+        <rich_text weight="heavy">Problem 5:</rich_text>
+        <rich_text> Find numbers in between [L,R] which are divisible by all array elements of the given array of size n. 
+		</rich_text>
+        <rich_text weight="heavy">Solution:</rich_text>
+        <rich_text> 
+			1. Calculate the </rich_text>
+        <rich_text link="webs https://www.geeksforgeeks.org/lcm-of-given-array-elements/">LCM</rich_text>
+        <rich_text> of all the elements of given arr[]
+			2. Now, check the </rich_text>
+        <rich_text weight="heavy">LCM</rich_text>
+        <rich_text> for these conditions:
+					 1. If</rich_text>
+        <rich_text weight="heavy"> (LCM &lt; L and LCM*2 &gt; R)</rich_text>
+        <rich_text>, then print -1.
+					 2. If </rich_text>
+        <rich_text weight="heavy">(LCM &gt; R)</rich_text>
+        <rich_text>, then print -1.
+			3. Now, take the nearest value of </rich_text>
+        <rich_text weight="heavy">L</rich_text>
+        <rich_text> (between </rich_text>
+        <rich_text weight="heavy">L </rich_text>
+        <rich_text>to </rich_text>
+        <rich_text weight="heavy">R</rich_text>
+        <rich_text>) which is divisible by the </rich_text>
+        <rich_text weight="heavy">LCM</rich_text>
+        <rich_text>, say </rich_text>
+        <rich_text weight="heavy">i</rich_text>
+        <rich_text>.
+			4. Now, start printing</rich_text>
+        <rich_text weight="heavy"> i</rich_text>
+        <rich_text> and increment it by</rich_text>
+        <rich_text weight="heavy"> LCM</rich_text>
+        <rich_text> every time after printing, until it becomes greater than </rich_text>
+        <rich_text weight="heavy">R</rich_text>
+        <rich_text>.
+
+
+</rich_text>
+        <rich_text weight="heavy">Pair Sums Divisibility:</rich_text>
+        <rich_text> 
+	Given an array and positive integer k, count the total number of pairs in the array whose sum is divisible by k.
+		</rich_text>
+        <rich_text weight="heavy">Solution:</rich_text>
+        <rich_text> Modulo every numbers in the array by k and keep the frequency of those numbers. Now the elements {a[i], k-a[i]} and {a[i]==0} will make pairs (a[i] will make pair with k-a[i] and the elements a[i]==0 s will make pair among themselves). Keep a flag whether the elements were used in pairs or not.
+		Complexity: </rich_text>
+        <rich_text family="monospace">O(nlog(n))</rich_text>
+        <rich_text> as map is used.
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+		
+
+</rich_text>
+        <rich_text weight="heavy">Subarray Sums Divisibility: </rich_text>
+        <rich_text>
+	Given an array of positive and/or negative integers and a value k, count of all sub-arrays whose sum is divisible by K.
+		</rich_text>
+        <rich_text weight="heavy">Solution:</rich_text>
+        <rich_text> 
+			Let there be a subarray (i, j) whose sum is divisible by k
+			  </rich_text>
+        <rich_text family="monospace">sum(i, j) = sum(0, j) - sum(0, i-1)</rich_text>
+        <rich_text>
+			Sum for any subarray can be written as </rich_text>
+        <rich_text family="monospace">q*k + rem</rich_text>
+        <rich_text> where </rich_text>
+        <rich_text family="monospace">q</rich_text>
+        <rich_text> is a quotient and </rich_text>
+        <rich_text family="monospace">rem</rich_text>
+        <rich_text> is remainder
+			Thus,     
+				</rich_text>
+        <rich_text family="monospace">sum(i, j) = (q1 * k + rem1) - (q2 * k + rem2)</rich_text>
+        <rich_text>
+				</rich_text>
+        <rich_text family="monospace">sum(i, j) = (q1 - q2)k + rem1-rem2</rich_text>
+        <rich_text>
+				 
+			We see, for </rich_text>
+        <rich_text family="monospace">sum(i, j)</rich_text>
+        <rich_text> i.e. for sum of any subarray to be divisible by </rich_text>
+        <rich_text family="monospace">k</rich_text>
+        <rich_text>, the RHS should also be divisible by </rich_text>
+        <rich_text family="monospace">k</rich_text>
+        <rich_text>.
+			</rich_text>
+        <rich_text family="monospace">(q1 - q2)k</rich_text>
+        <rich_text> is obviously divisible by </rich_text>
+        <rich_text family="monospace">k</rich_text>
+        <rich_text>, for </rich_text>
+        <rich_text family="monospace">(rem1-rem2)</rich_text>
+        <rich_text> to follow the same, 
+			</rich_text>
+        <rich_text family="monospace">rem1 = rem2</rich_text>
+        <rich_text> where,
+				</rich_text>
+        <rich_text family="monospace">rem1 = sum of subarray (0, j) % k</rich_text>
+        <rich_text>
+				</rich_text>
+        <rich_text family="monospace">rem2 = sum of subarray (0, i-1) % k </rich_text>
+        <rich_text>
+		Complexity: </rich_text>
+        <rich_text family="monospace">O(n)</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>		
+	
+</rich_text>
+        <codebox char_offset="3052" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+typedef unsigned long long ull;
+#define endl "\n"
+
+int main()
+{
+	string s;
+	ll x;
+	cin &gt;&gt; s &gt;&gt; x;
+
+	ll rem = 0;
+	for (int i = 0; i &lt; s.length(); i++)
+	{
+		rem = (rem * 10) % x + (s[i] - '0') % x;
+	}
+
+	if (rem == 0)
+		cout &lt;&lt; "Divisible" &lt;&lt; endl;
+	else
+		cout &lt;&lt; "Not Divisible" &lt;&lt; endl;
+
+	return 0;
+}</codebox>
+        <codebox char_offset="5669" justification="left" frame_width="90" frame_height="10" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+typedef unsigned long long ull;
+#define endl "\n"
+
+int main()
+{
+	ll k, n;
+	cin &gt;&gt; n &gt;&gt; k;
+	vector&lt;ll&gt; arr(n);
+	map&lt;ll, ll&gt; frq;
+	map&lt;ll, bool&gt; flg;
+
+	for (ll i = 0; i &lt; n; i++)
+		cin &gt;&gt; arr[i], arr[i] %= k, frq[arr[i]]++, flg[arr[i]] = true;
+
+	ll cnt = 0;
+	for (ll i = 0; i &lt; n; i++)
+	{
+		if (flg[arr[i]])
+		{
+			// arr[i] == k - arr[i] means they can make pair among themselvs as their sum is divisible by k
+			// arr[i] == 0 means the numbers are individually divisible by k. So they can make pair among themselvs.
+			if (arr[i] == k - arr[i] || arr[i] == 0)
+			{
+				ll x = frq[arr[i]] - 1;
+				cnt += (x * (x + 1)) / 2;
+			}
+			else
+				cnt += frq[arr[i]] * frq[k - arr[i]];
+
+			flg[arr[i]] = flg[k - arr[i]] = false;
+		}
+	}
+
+	cout &lt;&lt; cnt &lt;&lt; endl;
+
+	return 0;
+}</codebox>
+        <codebox char_offset="6478" justification="left" frame_width="90" frame_height="10" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+typedef unsigned long long ull;
+
+int main()
+{
+	ll k, n;
+	bool ok, flg;
+
+	cin &gt;&gt; n &gt;&gt; k;
+	vector&lt;ll&gt; arr(n);
+	map&lt;ll, ll&gt; mod;
+	for (ll i = 0; i &lt; n; i++)
+		cin &gt;&gt; arr[i];
+
+	ll sum = 0;
+	for (ll i = 0; i &lt; n; i++)
+		sum += arr[i], mod[((sum % k) + k) % k]++;
+
+	ll cnt = 0;
+	cnt += mod[0];
+	for (auto it : mod)
+	{
+		if (it.second &gt; 1)
+			cnt += ((it.second - 1) * (it.second)) / 2;
+	}
+	cout &lt;&lt; cnt &lt;&lt; endl;
+
+	return 0;
+}</codebox>
+      </node>
+      <node name="GCD and LCM" unique_id="12" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1672604148" ts_lastsave="1684263442">
+        <rich_text weight="heavy">GCD:</rich_text>
+        <rich_text> The greatest common divisor (GCD) of two or more integers, which are not all zero, is the largest positive integer that divides each of the integers. For two integers </rich_text>
+        <rich_text style="italic">x, y,</rich_text>
+        <rich_text> the greatest common divisor of </rich_text>
+        <rich_text style="italic">x</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text style="italic">y</rich_text>
+        <rich_text> is denoted </rich_text>
+        <rich_text style="italic">gcd(x,y)</rich_text>
+        <rich_text>. For example, the GCD of 8 and 12 is 4, that is, gcd(8,12)=4.
+	</rich_text>
+        <rich_text weight="heavy">Properties:</rich_text>
+        <rich_text>
+		• Every common divisor of </rich_text>
+        <rich_text family="monospace">a</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text family="monospace">b</rich_text>
+        <rich_text> is a divisor of </rich_text>
+        <rich_text family="monospace">gcd(a,b)</rich_text>
+        <rich_text> 
+		• The gcd is a commutative function: </rich_text>
+        <rich_text family="monospace">gcd(a,b) = gcd(b,a)</rich_text>
+        <rich_text> 
+		• The gcd is an associative function: </rich_text>
+        <rich_text family="monospace">gcd(a,gcd(b,c)) = gcd(gcd(a,b),c)</rich_text>
+        <rich_text> 
+		• The gcd of three numbers can be computed as </rich_text>
+        <rich_text family="monospace">gcd(a,b,c) = gcd(gcd(a,b),c)</rich_text>
+        <rich_text>, or in some different way by applying commutativity and associativity. This can be extended to any number of numbers. 
+		• </rich_text>
+        <rich_text family="monospace">gcd(a,b) = gcd(a−b,b)</rich_text>
+        <rich_text>
+		
+	In C++ builtin function </rich_text>
+        <rich_text family="monospace">__gcd(a, b)</rich_text>
+        <rich_text> used to find the gcd of a and b. 
+	</rich_text>
+        <rich_text style="italic">Complexity:</rich_text>
+        <rich_text> </rich_text>
+        <rich_text family="monospace" style="italic">O</rich_text>
+        <rich_text family="monospace">(log(</rich_text>
+        <rich_text family="monospace" style="italic">min</rich_text>
+        <rich_text family="monospace">(</rich_text>
+        <rich_text family="monospace" style="italic">a</rich_text>
+        <rich_text family="monospace">,</rich_text>
+        <rich_text family="monospace" style="italic">b</rich_text>
+        <rich_text family="monospace">)))</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+</rich_text>
+        <rich_text weight="heavy">LCM:</rich_text>
+        <rich_text> The least common multiple, lowest common multiple, or smallest common multiple of two integers </rich_text>
+        <rich_text style="italic">a</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text style="italic">b</rich_text>
+        <rich_text>, usually denoted by </rich_text>
+        <rich_text style="italic">lcm(a,b)</rich_text>
+        <rich_text>, is the smallest positive integer that is divisible by both </rich_text>
+        <rich_text style="italic">a</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text style="italic">b</rich_text>
+        <rich_text>.
+	Suppose 
+		</rich_text>
+        <rich_text family="monospace">a=2</rich_text>
+        <rich_text family="monospace" scale="sup">3</rich_text>
+        <rich_text family="monospace">.3</rich_text>
+        <rich_text family="monospace" scale="sup">4</rich_text>
+        <rich_text family="monospace">.5</rich_text>
+        <rich_text family="monospace" scale="sup">1</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text family="monospace">b=2</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text family="monospace">.3</rich_text>
+        <rich_text family="monospace" scale="sup">5</rich_text>
+        <rich_text family="monospace">.7</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text>
+	So, </rich_text>
+        <rich_text family="monospace">gcd(a,b) = 2</rich_text>
+        <rich_text family="monospace" scale="sup">min(2,3)</rich_text>
+        <rich_text family="monospace">.3</rich_text>
+        <rich_text family="monospace" scale="sup">min(4,5)</rich_text>
+        <rich_text family="monospace">.5</rich_text>
+        <rich_text family="monospace" scale="sup">min(1,0)</rich_text>
+        <rich_text family="monospace">.7</rich_text>
+        <rich_text family="monospace" scale="sup">min(0,2)</rich_text>
+        <rich_text family="monospace"> = 2</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text family="monospace">.3</rich_text>
+        <rich_text family="monospace" scale="sup">4</rich_text>
+        <rich_text family="monospace">.5</rich_text>
+        <rich_text family="monospace" scale="sup">0</rich_text>
+        <rich_text family="monospace">.7</rich_text>
+        <rich_text family="monospace" scale="sup">0</rich_text>
+        <rich_text>
+		  </rich_text>
+        <rich_text family="monospace">lcm(a,b) = 2</rich_text>
+        <rich_text family="monospace" scale="sup">max(2,3)</rich_text>
+        <rich_text family="monospace">.3</rich_text>
+        <rich_text family="monospace" scale="sup">max(4,5)</rich_text>
+        <rich_text family="monospace">.5</rich_text>
+        <rich_text family="monospace" scale="sup">max(1,0)</rich_text>
+        <rich_text family="monospace">.7</rich_text>
+        <rich_text family="monospace" scale="sup">max(0,2)</rich_text>
+        <rich_text family="monospace"> = 2</rich_text>
+        <rich_text family="monospace" scale="sup">3</rich_text>
+        <rich_text family="monospace">.3</rich_text>
+        <rich_text family="monospace" scale="sup">5</rich_text>
+        <rich_text family="monospace">.5</rich_text>
+        <rich_text family="monospace" scale="sup">1</rich_text>
+        <rich_text family="monospace">.7</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text>
+	Therefore, </rich_text>
+        <rich_text family="monospace">gcd(a,b).lcm(a,b) = (2</rich_text>
+        <rich_text family="monospace" scale="sup">min(2,3)</rich_text>
+        <rich_text family="monospace">.3</rich_text>
+        <rich_text family="monospace" scale="sup">min(4,5)</rich_text>
+        <rich_text family="monospace">.5</rich_text>
+        <rich_text family="monospace" scale="sup">min(1,0)</rich_text>
+        <rich_text family="monospace">.7</rich_text>
+        <rich_text family="monospace" scale="sup">min(0,2)</rich_text>
+        <rich_text family="monospace">) . (2</rich_text>
+        <rich_text family="monospace" scale="sup">max(2,3)</rich_text>
+        <rich_text family="monospace">.3</rich_text>
+        <rich_text family="monospace" scale="sup">max(4,5)</rich_text>
+        <rich_text family="monospace">.5</rich_text>
+        <rich_text family="monospace" scale="sup">max(1,0)</rich_text>
+        <rich_text family="monospace">.7</rich_text>
+        <rich_text family="monospace" scale="sup">max(0,2)</rich_text>
+        <rich_text family="monospace">)</rich_text>
+        <rich_text> 
+					</rich_text>
+        <rich_text family="monospace">=&gt; gcd(a,b).lcm(a,b) = 2</rich_text>
+        <rich_text family="monospace" scale="sup">2+3</rich_text>
+        <rich_text family="monospace">.3</rich_text>
+        <rich_text family="monospace" scale="sup">4+5</rich_text>
+        <rich_text family="monospace">.5</rich_text>
+        <rich_text family="monospace" scale="sup">0+1</rich_text>
+        <rich_text family="monospace">.7</rich_text>
+        <rich_text family="monospace" scale="sup">0+2</rich_text>
+        <rich_text family="monospace"> </rich_text>
+        <rich_text>
+					</rich_text>
+        <rich_text family="monospace">=&gt; gcd(a,b).lcm(a,b) = (2</rich_text>
+        <rich_text family="monospace" scale="sup">3</rich_text>
+        <rich_text family="monospace">.3</rich_text>
+        <rich_text family="monospace" scale="sup">4</rich_text>
+        <rich_text family="monospace">.5</rich_text>
+        <rich_text family="monospace" scale="sup">1</rich_text>
+        <rich_text family="monospace">).(2</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text family="monospace">.3</rich_text>
+        <rich_text family="monospace" scale="sup">5</rich_text>
+        <rich_text family="monospace">.7</rich_text>
+        <rich_text family="monospace" scale="sup">2</rich_text>
+        <rich_text family="monospace">)</rich_text>
+        <rich_text> 
+					</rich_text>
+        <rich_text family="monospace">=&gt; gcd(a,b).lcm(a,b) = a.b</rich_text>
+        <rich_text>
+					</rich_text>
+        <rich_text family="monospace">=&gt; lcm(a,b) = (a.b)/gcd(a,b)</rich_text>
+        <rich_text>
+	
+	</rich_text>
+        <rich_text style="italic">Complexity:</rich_text>
+        <rich_text> </rich_text>
+        <rich_text family="monospace" style="italic">O</rich_text>
+        <rich_text family="monospace">(log(</rich_text>
+        <rich_text family="monospace" style="italic">min</rich_text>
+        <rich_text family="monospace">(</rich_text>
+        <rich_text family="monospace" style="italic">a</rich_text>
+        <rich_text family="monospace">,</rich_text>
+        <rich_text family="monospace" style="italic">b</rich_text>
+        <rich_text family="monospace">)))</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+</rich_text>
+        <rich_text weight="heavy">Euclid's Algorithm:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text family="monospace">GCD(a,b)=GCD(b,a%b)</rich_text>
+        <rich_text>
+	
+	</rich_text>
+        <rich_text weight="heavy">Proof:</rich_text>
+        <rich_text>
+		The Euclidean Algorithm works on the principle </rich_text>
+        <rich_text family="monospace">GCD(a,b)=GCD(b,a%b)</rich_text>
+        <rich_text>. If we can prove this, then there will be no doubt about the algorithm. 
+		Let </rich_text>
+        <rich_text family="monospace">g=GCD(a,b)</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text family="monospace">a=k×b+r</rich_text>
+        <rich_text>, where </rich_text>
+        <rich_text family="monospace">k</rich_text>
+        <rich_text> is a non-negative integer and </rich_text>
+        <rich_text family="monospace">r</rich_text>
+        <rich_text> is the remainder. Since </rich_text>
+        <rich_text family="monospace">g</rich_text>
+        <rich_text> divides </rich_text>
+        <rich_text family="monospace">a</rich_text>
+        <rich_text>, </rich_text>
+        <rich_text family="monospace">g</rich_text>
+        <rich_text> also divides </rich_text>
+        <rich_text family="monospace">k×b+r</rich_text>
+        <rich_text>. Since </rich_text>
+        <rich_text family="monospace">g</rich_text>
+        <rich_text> divides </rich_text>
+        <rich_text family="monospace">b</rich_text>
+        <rich_text>, </rich_text>
+        <rich_text family="monospace">g</rich_text>
+        <rich_text> also divides </rich_text>
+        <rich_text family="monospace">k×b</rich_text>
+        <rich_text>. Therefore, </rich_text>
+        <rich_text family="monospace">g</rich_text>
+        <rich_text> must divide </rich_text>
+        <rich_text family="monospace">r</rich_text>
+        <rich_text> otherwise </rich_text>
+        <rich_text family="monospace">k×b+r</rich_text>
+        <rich_text> won’t be divisible. So we proved that </rich_text>
+        <rich_text family="monospace">g</rich_text>
+        <rich_text> divides </rich_text>
+        <rich_text family="monospace">b</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text family="monospace">r</rich_text>
+        <rich_text>. 
+		Now lets say we have </rich_text>
+        <rich_text family="monospace">g′=gcd(b,r)</rich_text>
+        <rich_text>. Since </rich_text>
+        <rich_text family="monospace">g′</rich_text>
+        <rich_text> divides both </rich_text>
+        <rich_text family="monospace">b</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text family="monospace">r</rich_text>
+        <rich_text>, it will divide </rich_text>
+        <rich_text family="monospace">k×b+r</rich_text>
+        <rich_text>. Therefore, </rich_text>
+        <rich_text family="monospace">g′</rich_text>
+        <rich_text> will divide </rich_text>
+        <rich_text family="monospace">a</rich_text>
+        <rich_text>. 
+		Now, can g and g′ be two different numbers? No. We will prove this using contradiction. 
+		Let’s say that </rich_text>
+        <rich_text family="monospace">g&gt;g′</rich_text>
+        <rich_text>. We know that </rich_text>
+        <rich_text family="monospace">g</rich_text>
+        <rich_text> divides both </rich_text>
+        <rich_text family="monospace">b</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text family="monospace">r</rich_text>
+        <rich_text>. So how can </rich_text>
+        <rich_text family="monospace">gcd(b,r)</rich_text>
+        <rich_text> be </rich_text>
+        <rich_text family="monospace">g′</rich_text>
+        <rich_text> when we have a number greater than </rich_text>
+        <rich_text family="monospace">g′</rich_text>
+        <rich_text> that divides both </rich_text>
+        <rich_text family="monospace">b</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text family="monospace">r</rich_text>
+        <rich_text>? So </rich_text>
+        <rich_text family="monospace">g</rich_text>
+        <rich_text> cannot be greater than </rich_text>
+        <rich_text family="monospace">g′</rich_text>
+        <rich_text>. Using the same logic, we find there is a contradiction when </rich_text>
+        <rich_text family="monospace">g&lt;g</rich_text>
+        <rich_text>′. 
+		Therefore, the only possibility left is </rich_text>
+        <rich_text family="monospace">g=g′</rich_text>
+        <rich_text>. 
+		∴</rich_text>
+        <rich_text family="monospace">GCD(a,b) = GCD(b,r) = GCD(b,a%b)</rich_text>
+        <rich_text>.
+	
+</rich_text>
+        <rich_text weight="heavy">Co-primes:</rich_text>
+        <rich_text>
+	Two integers a and b are coprime, relatively prime or mutually prime if the only positive integer that is a divisor of both of them is 1.
+	If </rich_text>
+        <rich_text family="monospace">GCD(a,b)=1</rich_text>
+        <rich_text> then </rich_text>
+        <rich_text family="monospace">a</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text family="monospace">b</rich_text>
+        <rich_text> are co-prime.
+	
+</rich_text>
+        <rich_text weight="heavy">GCD and LCM of an Array using Prime Factor:</rich_text>
+        <rich_text>
+    1. Find the primes using sieve.
+    2. Track (min/max) the number of each prime factor for the entire array. 
+       1) For </rich_text>
+        <rich_text style="italic" weight="heavy">GCD</rich_text>
+        <rich_text> track </rich_text>
+        <rich_text style="italic" weight="heavy">minimum</rich_text>
+        <rich_text> number of each prime factor.
+       2) For </rich_text>
+        <rich_text style="italic" weight="heavy">LCM</rich_text>
+        <rich_text> track </rich_text>
+        <rich_text style="italic" weight="heavy">maximum</rich_text>
+        <rich_text> number of each prime factor.
+    3. Multiply the each prime factor tracked (min/max) number of times.
+       1) For </rich_text>
+        <rich_text style="italic" weight="heavy">GCD</rich_text>
+        <rich_text> multiply </rich_text>
+        <rich_text style="italic" weight="heavy">minimum</rich_text>
+        <rich_text> number of times. 
+       2) For </rich_text>
+        <rich_text style="italic" weight="heavy">LCM</rich_text>
+        <rich_text> multiply </rich_text>
+        <rich_text style="italic" weight="heavy">maximum</rich_text>
+        <rich_text> number of times. 
+
+</rich_text>
+        <rich_text weight="heavy">Related Problem:</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text style="italic" weight="heavy">1. Find the GCD of large number.</rich_text>
+        <rich_text>
+		Solution: Suppose two numbers a and b. a is large enough to store in long long but b is so large that we have use string to store it.  Hence, we will try to make it less than or equal to ‘a’ by taking it’s modulo with ‘a’. We will traverse the b and calculate the modulo.
+		</rich_text>
+        <rich_text style="italic">Complexity:</rich_text>
+        <rich_text> </rich_text>
+        <rich_text family="monospace" style="italic">O</rich_text>
+        <rich_text family="monospace">(</rich_text>
+        <rich_text family="monospace" style="italic">min</rich_text>
+        <rich_text family="monospace">(</rich_text>
+        <rich_text family="monospace" style="italic">a</rich_text>
+        <rich_text family="monospace">,</rich_text>
+        <rich_text family="monospace" style="italic">b</rich_text>
+        <rich_text family="monospace">))</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+</rich_text>
+        <rich_text style="italic" weight="heavy">	2. Find the LCM of an array.</rich_text>
+        <rich_text>
+		Solution: Perform the lcm operation for every number of the array.
+		</rich_text>
+        <rich_text style="italic">Complexity:</rich_text>
+        <rich_text> </rich_text>
+        <rich_text family="monospace">O(n)</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+	</rich_text>
+        <rich_text weight="heavy">3. Find the modular LCM of an array.</rich_text>
+        <rich_text>
+		Solution: Find the primes using sieve. Then track the maximum number of each prime factor for the entire array. Last multiply the each prime factor maximum number of times. 
+		</rich_text>
+        <rich_text style="italic">Complexity:</rich_text>
+        <rich_text> </rich_text>
+        <rich_text family="monospace">O(n</rich_text>
+        <rich_text>)
+		</rich_text>
+        <rich_text style="italic">Code Snippet:</rich_text>
+        <rich_text>
+		</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+	
+</rich_text>
+        <codebox char_offset="851" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+typedef unsigned long long ull;
+
+ll gcd(ll a, ll b)
+{
+	if (a == 0)
+		return b;
+	return gcd(b % a, a);
+}
+
+int main()
+{
+	ll a, b;
+
+	cin &gt;&gt; a &gt;&gt; b;
+	cout &lt;&lt; __gcd(a, b) &lt;&lt; endl;
+	cout &lt;&lt; gcd(a, b) &lt;&lt; endl;
+
+	return 0;
+}</codebox>
+        <codebox char_offset="1568" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+typedef unsigned long long ull;
+
+ll gcd(ll a, ll b)
+{
+	if (a == 0)
+		return b;
+	return gcd(b % a, a);
+}
+
+int main()
+{
+	ll a, b;
+
+	cin &gt;&gt; a &gt;&gt; b;
+	cout &lt;&lt; (a * b) / __gcd(a, b) &lt;&lt; endl;
+	cout &lt;&lt; (a * b) / gcd(a, b) &lt;&lt; endl;
+	// ((a / gcd(a, b)) * b); //avoids integer overflow
+
+	return 0;
+}</codebox>
+        <codebox char_offset="3604" justification="left" frame_width="90" frame_height="100" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main()
+{
+	int n;
+	cin &gt;&gt; n;
+
+	cout &lt;&lt; "Count of numbers till " &lt;&lt; n &lt;&lt; " which has odd number of divisors: " &lt;&lt; sqrt(n) &lt;&lt; endl;
+	cout &lt;&lt; "The numbers are: ";
+	for (int i = 1; i * i &lt;= n; i++) // i * i &lt;= n is same as i &lt;= sqrt(n) but not safe because of double precision
+		cout &lt;&lt; i &lt;&lt; " ";
+
+	return 0;
+}</codebox>
+        <codebox char_offset="3743" justification="left" frame_width="90" frame_height="10" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+typedef unsigned long long ull;
+#define endl "\n"
+
+ll gcd(ll a, ll b)
+{
+	if (a == 0)
+		return b;
+
+	return gcd(b % a, a);
+}
+
+int main()
+{
+	ll n;
+	cin &gt;&gt; n;
+	vector&lt;ll&gt; arr(n);
+	
+	for (ll i = 0; i &lt; n; i++)
+		cin &gt;&gt; arr[i];
+
+	ll lcm = arr[0];
+	for (ll i = 1; i &lt; n; i++)
+	{
+		lcm = (arr[i] / gcd(arr[i], lcm)) * lcm; // formula lcm(a,b) = (a*b)/gcd(a,b)
+	}
+	cout &lt;&lt; lcm &lt;&lt; endl;
+
+	return 0;
+}</codebox>
+        <codebox char_offset="3997" justification="left" frame_width="90" frame_height="10" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+typedef unsigned long long ull;
+#define endl "\n"
+
+const ll N = 1e6 + 10;
+const ll mod = 1e9 + 7;
+
+vector&lt;bool&gt; isPrime(N, true);
+vector&lt;ll&gt; primes;
+map&lt;ll, ll&gt; maxFactor;
+void sieve()
+{
+	isPrime[0] = isPrime[1] = false;
+	for (ll i = 1; i * i &lt;= N; i++)
+	{
+		if (isPrime[i])
+		{
+			for (ll j = i + i; j &lt;= N; j += i)
+				isPrime[j] = false;
+		}
+	}
+
+	for (ll i = 0; i &lt; N; i++)
+		if (isPrime[i])
+			maxFactor[it] = max(maxFactor[it], c);
+}
+
+int main()
+{
+	sieve();
+
+	ll n;
+	cin &gt;&gt; n;
+	vector&lt;ll&gt; arr(n);
+
+	for (ll i = 0; i &lt; n; i++)
+		cin &gt;&gt; arr[i];
+
+	for (ll i = 0; i &lt; n; i++)
+	{
+		ll x = arr[i];
+		for (auto it : primes)
+		{
+			ll c = 0;
+			while (x % it == 0 &amp;&amp; x &gt;= it)
+				c++, x /= it;
+
+			maxFactor[it] = max(maxFactor[it], c);
+		}
+	}
+
+	ll lcm = 1;
+	for (auto it : maxFactor)
+	{
+		ll c = it.second;
+		if (c)
+		{
+			for (ll i = 0; i &lt; c; i++)
+			{
+				lcm = (lcm * it.first) % mod;
+			}
+		}
+	}
+	cout &lt;&lt; lcm &lt;&lt; endl;
+
+	return 0;
+}</codebox>
+      </node>
+      <node name="Digital Root" unique_id="7" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1666190385" ts_lastsave="1682634830">
+        <rich_text>The digital root (also repeated digital sum) of a natural number in a given radix is the (single digit) value obtained by an iterative process of summing digits, on each iteration using the result from the previous iteration to compute a digit sum. The process continues until a single-digit number is reached. For example, in base 10, the digital root of the number 12345 is 6 because the sum of the digits in the number is 1 + 2 + 3 + 4 + 5 = 15, then the addition process is repeated again for the resulting number 15, so that the sum of 1 + 5 equals 6, which is the digital root of that number. In base 10, this is equivalent to taking the remainder upon division by 9 (except when the digital root is 9, where the remainder upon division by 9 will be 0), which allows it to be used as a divisibility rule. 
+
+</rich_text>
+        <rich_text weight="heavy">Propertise:</rich_text>
+        <rich_text>
+   •   If we multiply any number by 9, the digital root will always be 9.     
+   •   Adding 9 to a number does not change the digital root of that number.     
+   •   If we divide any number by 9, the digital root of that number will be the remainder. 
+  
+</rich_text>
+        <rich_text weight="heavy">Formula:</rich_text>
+        <rich_text>
+	DR</rich_text>
+        <rich_text family="monospace">(x)=(x−1) mod 9+1</rich_text>
+      </node>
+      <node name="Combinatorics" unique_id="4" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1665134617" ts_lastsave="1682634821">
+        <node name="Permutation" unique_id="5" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1665134633" ts_lastsave="1665134633"/>
+        <node name="Combination" unique_id="6" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1665134649" ts_lastsave="1665136228"/>
+      </node>
+    </node>
+    <node name="Data Structures" unique_id="8" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1669300304" ts_lastsave="1669300321"/>
+    <node name="Algorithms" unique_id="9" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1669300335" ts_lastsave="1725447451">
+      <node name="Bit Manupulation" unique_id="13" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1672913339" ts_lastsave="1725386652"/>
+      <node name="Hashing" unique_id="16" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1724748798" ts_lastsave="1725386593">
+        <rich_text>Hashing is a technique used in data structures to store and retrieve data efficiently. It involves mapping data to a specific index in a hash table using a hash function that enables fast retrieval of information based on its key. The important thing about hashing is that the operation like </rich_text>
+        <rich_text style="italic" weight="heavy">store, fetch</rich_text>
+        <rich_text> can be done in </rich_text>
+        <rich_text style="italic" weight="heavy">O(1)</rich_text>
+        <rich_text> time on average.
+
+The size of the hash table (</rich_text>
+        <rich_text style="italic" weight="heavy">arrary or vector</rich_text>
+        <rich_text>) can be declared as,
+</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+For greater value, </rich_text>
+        <rich_text style="italic" weight="heavy">map</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text style="italic" weight="heavy">unordered map</rich_text>
+        <rich_text> can be used as hash table.
+In map the operations like </rich_text>
+        <rich_text style="italic" weight="heavy">store </rich_text>
+        <rich_text>and</rich_text>
+        <rich_text style="italic" weight="heavy"> fetch</rich_text>
+        <rich_text> can be done in </rich_text>
+        <rich_text style="italic" weight="heavy">O(log(n))</rich_text>
+        <rich_text>, but in unordered map they can be done in </rich_text>
+        <rich_text style="italic" weight="heavy">O(1)</rich_text>
+        <rich_text> most of the time but in worst case it can be </rich_text>
+        <rich_text style="italic" weight="heavy">O(n)</rich_text>
+        <rich_text>. unordered map use bin or bracket method. If the values are stored in the same bracket or bin because of internal hashing function then it would take little bit more time than others because of collisions.
+
+</rich_text>
+        <rich_text style="italic">Example:</rich_text>
+        <rich_text>
+values: 2, 5, 15, 16, 28, 18, 48, 78, 68, 59
+	and let the bracket size be 10, tough in real life it is much bigger than this and little bit complecated.
+	
+	bracket
+	0	→  		
+	1	→
+	2	→	2, 
+	3	→
+	4	→
+	5	→	5, 15
+	6	→	16,
+	7	→	
+	8	→ 18, 28, 48, 68, 78,
+	9  →	59</rich_text>
+        <table char_offset="409" justification="left" col_min="70" col_max="70" col_widths="0,0,0">
+          <row>
+            <cell>Local (inside main function)</cell>
+            <cell>10^6</cell>
+            <cell>10^7</cell>
+          </row>
+          <row>
+            <cell>Global</cell>
+            <cell>10^7</cell>
+            <cell>10^8</cell>
+          </row>
+          <row>
+            <cell>                                           </cell>
+            <cell>int</cell>
+            <cell>bool</cell>
+          </row>
+        </table>
+      </node>
+      <node name="2-3 Pointer" unique_id="17" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1725386683" ts_lastsave="1725453532">
+        <rich_text weight="heavy">Dutch National Flag</rich_text>
+        <rich_text>
+	it's used to sort an array consisting of three distinct elements (usually represented as 0, 1, and 2) in linear time.
+	
+</rich_text>
+        <rich_text style="italic" weight="heavy">Statement:</rich_text>
+        <rich_text>
+	Given an array containing only 0s, 1s, and 2s, sort the array in ascending order.
+	
+	</rich_text>
+        <rich_text style="italic" weight="heavy">Approach:</rich_text>
+        <rich_text>
+	1. Use three pointers:
+		• `</rich_text>
+        <rich_text family="monospace">low</rich_text>
+        <rich_text>` to keep track of the position of the next 0.
+		• `</rich_text>
+        <rich_text family="monospace">mid</rich_text>
+        <rich_text>` to traverse the array.
+		• `</rich_text>
+        <rich_text family="monospace">high</rich_text>
+        <rich_text>` to keep track of the position of the next 2.
+	2. The idea is to move 0s to the beginning, 2s to the end, and 1s in the middle.
+	3. Iterate over the array with the </rich_text>
+        <rich_text family="monospace">mid</rich_text>
+        <rich_text> pointer:
+		• If </rich_text>
+        <rich_text family="monospace">nums[mid]</rich_text>
+        <rich_text> is 0, swap it with </rich_text>
+        <rich_text family="monospace">nums[low]</rich_text>
+        <rich_text> and increment both </rich_text>
+        <rich_text family="monospace">low</rich_text>
+        <rich_text> and </rich_text>
+        <rich_text family="monospace">mid</rich_text>
+        <rich_text>.
+		• If </rich_text>
+        <rich_text family="monospace">nums[mid]</rich_text>
+        <rich_text> is 1, just move </rich_text>
+        <rich_text family="monospace">mid</rich_text>
+        <rich_text> ahead.
+		• If </rich_text>
+        <rich_text family="monospace">nums[mid]</rich_text>
+        <rich_text> is 2, swap it with </rich_text>
+        <rich_text family="monospace">nums[high]</rich_text>
+        <rich_text> and decrement </rich_text>
+        <rich_text family="monospace">high</rich_text>
+        <rich_text> (keep mid unchanged since the new element at </rich_text>
+        <rich_text family="monospace">mid</rich_text>
+        <rich_text> might still need sorting).
+	
+	Complexity: </rich_text>
+        <rich_text family="monospace">O(n)</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text style="italic">Code Snippet: </rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+
+</rich_text>
+        <codebox char_offset="848" justification="left" frame_width="90" frame_height="10" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">void sortColors(vector&lt;int&gt; &amp;nums)
+{
+	int n = nums.size();
+	int low = 0, mid = 0, high = n - 1;
+
+	while (mid &lt;= high)
+	{
+		if (nums[mid] == 0)
+		{
+			swap(nums[mid], nums[low]);
+			low++, mid++;
+		}
+		else if (nums[mid] == 2)
+		{
+			swap(nums[mid], nums[high]);
+			high--;
+		}
+		else if (nums[mid] == 1)
+			mid++;
+	}
+}</codebox>
+      </node>
+      <node name="Array Analysis" unique_id="18" prog_lang="custom-colors" tags="" readonly="0" nosearch_me="0" nosearch_ch="0" custom_icon_id="0" is_bold="1" foreground="" ts_creation="1725446470" ts_lastsave="1725454356">
+        <rich_text weight="heavy">Moore Voting Algorithm</rich_text>
+        <rich_text>
+
+</rich_text>
+        <rich_text style="italic" weight="heavy">Statement:</rich_text>
+        <rich_text>
+	Given an array of size n, find the majority element. The majority element is the element that appears more than n/2 times. Assume that the array is non-empty and the majority element always exists in the array.
+	
+</rich_text>
+        <rich_text style="italic" weight="heavy">	Approach:</rich_text>
+        <rich_text>
+	1. Candidate Selection
+		• Initialize a candidate and a count variable.
+		• Traverse through the array:
+			• If count is 0, update candidate to the current element and set count = 1.
+			• If the current element is the same as candidate, increment count.
+			• If the current element is different, decrement count.
+	2. Verification:
+		• After determining the candidate, traverse the array again to confirm that the candidate occurs more than n/2 times.
+	
+	Complexity: </rich_text>
+        <rich_text family="monospace">O(n)</rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text style="italic">Code Snippet: </rich_text>
+        <rich_text>
+	</rich_text>
+        <rich_text justification="left"></rich_text>
+        <rich_text>
+
+
+</rich_text>
+        <rich_text weight="heavy">Kadane's Algorithm</rich_text>
+        <rich_text>
+
+</rich_text>
+        <rich_text style="italic" weight="heavy">Statement:</rich_text>
+        <rich_text>
+Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+
+	</rich_text>
+        <rich_text style="italic" weight="heavy">Approach:</rich_text>
+        <rich_text>
+	1. Initialization:
+	Initialize two variables:
+		• sum to store the maximum sum of the subarray ending at the current index.
+		• maxSum to store the maximum sum found so far across all subarrays.
+	2. Iteration:
+• Traverse the array from the first to the last element.
+• For each element nums[i], sumup the element to the sum.
+• If sum is greater than maxSum, update maxSum.
+• if sum&lt;0 then update the sum as 0.
+	3. Result:
+	After the loop ends, maxSum will hold the maximum sum of the contiguous subarray.
+	</rich_text>
+        <rich_text justification="left"></rich_text>
+        <codebox char_offset="749" justification="left" frame_width="90" frame_height="10" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">int findMajorityElement(vector&lt;int&gt;&amp; nums) {
+	int candidate = 0;
+	int count = 0;
+
+	// Phase 1: Find a candidate
+	for (int num : nums) {
+		if (count == 0) {
+			candidate = num;
+		}
+		count += (num == candidate) ? 1 : -1;
+	}
+
+	// Phase 2: Verify the candidate
+	count = 0;
+	for (int num : nums) {
+		if (num == candidate) {
+			count++;
+		}
+	}
+
+	// If the candidate is the majority element, return it; otherwise, return -1
+	return (count &gt; nums.size() / 2) ? candidate : -1;
+}</codebox>
+        <codebox char_offset="1440" justification="left" frame_width="90" frame_height="10" width_in_pixels="0" syntax_highlighting="cpp" highlight_brackets="1" show_line_numbers="1">int maxSubArray(vector&lt;int&gt; &amp;nums)
+{
+	int maxSum = INT_MIN, sum = 0, n = nums.size();
+	for (int i = 0; i &lt; n; i++)
+	{
+		sum += nums[i];
+		maxSum = max(maxSum, sum);
+		if (sum &lt; 0)
+			sum = 0;
+	}
+
+	return maxSum;
+}</codebox>
+      </node>
+    </node>
+  </node>
+</cherrytree>
